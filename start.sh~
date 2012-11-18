@@ -35,12 +35,13 @@ done
 
 if [ -f $PWD/first.run ]
 then
-    sh first_run.sh
+	git clone https://www.github.com/soitanen/osm2fg.git osm2fg
+	sh $PWD/osm2fg/first_run.sh
 fi
 
 if [ $update -eq "y"]
 then
-	sh update.sh -t $tg
+	sh $PWD/osm2fg/update.sh -t $tg -p $ptp
 fi
 
 cd $ptp/osm2fg

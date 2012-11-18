@@ -36,7 +36,8 @@ done
 if [ -f $PWD/first.run ]
 then
 	git clone https://www.github.com/soitanen/osm2fg.git osm2fg
-	sh $PWD/osm2fg/first_run.sh
+	cd osm2fg
+	sh first_run.sh
 fi
 
 if [ $update -eq "y"]
