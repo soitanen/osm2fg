@@ -4,7 +4,7 @@ sudo apt-get install gdal-bin
 sudo apt-get install liblwp-protocol-https-perl
 sudo apt-get install libfile-slurp-perl
 
-rm first.run
+git clone https://www.github.com/soitanen/osm2fg.git osm2fg
 
 mkdir output
 mkdir work
@@ -14,3 +14,5 @@ mkdir airports_base
 mkdir ASTER
 mkdir shapefiles
 mkdir airports
+
+rm first.run

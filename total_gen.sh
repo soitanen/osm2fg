@@ -1,21 +1,29 @@
 #!/bin/bash
 
-############################################
-# Put here path to your terragear binaries #
-############################################
-tg=${HOME}/fgfs/install/terragear/bin
-############################################
+while getopts "n:s:w:e:t:" OPTION
+do
+     case $OPTION in
+         n)
+             n=$OPTARG
+             ;;
+         s)
+             s=$OPTARG
+             ;;
+         w)
+             w=$OPTARG
+             ;;
+         e)
+             e=$OPTARG
+             ;;
+         t)
+             tg=$OPTARG
+             ;;
+     esac
+done
 
 
 echo "Starting at:">terrlog.txt
 echo $(date)>>terrlog.txt
-
-# setting boundaries of generation
-# WARNING!!! Here must be only integer numbers!!!
-n=60
-s=59
-w=30
-e=31
 
 # height downloading and generation it in needed format
 sh height_gen.sh -n $n -s $s -w $w -e $e -t $tg

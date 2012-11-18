@@ -1,17 +1,47 @@
 #!/bin/bash
 
+ptp=$(pwd)
 ############################################
 # Put here path to your terragear binaries #
 ############################################
 tg=${HOME}/fgfs/install/terragear/bin
 ############################################
 
-sh update.sh -t $tg
+n=60
+s=59
+w=30
+e=31
+
+while getopts "n:s:w:e:u:" OPTION
+do
+     case $OPTION in
+         n)
+             n=$OPTARG
+             ;;
+         s)
+             s=$OPTARG
+             ;;
+         w)
+             w=$OPTARG
+             ;;
+         e)
+             e=$OPTARG
+             ;;
+         u)
+             update=$OPTARG
+             ;;
+     esac
+done
 
 if [ -f $PWD/first.run ]
 then
     sh first_run.sh
 fi
 
-cd osm2fg
-sh total_gen.sh
+if [ $update -eq "y"]
+then
+	sh update.sh -t $tg
+fi
+
+cd $ptp/osm2fg
+sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg

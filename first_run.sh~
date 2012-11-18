@@ -5,3 +5,12 @@ sudo apt-get install liblwp-protocol-https-perl
 sudo apt-get install libfile-slurp-perl
 
 rm first.run
+
+mkdir output
+mkdir work
+mkdir data
+cd data
+mkdir airports_base
+mkdir ASTER
+mkdir shapefiles
+mkdir airports
