@@ -65,19 +65,19 @@ echo $(date)
 $tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 echo Decoding osm_links
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_motorway_link $PWD/data/shapefiles/osm_motorway_link
+#$tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_motorway_link $PWD/data/shapefiles/osm_motorway_link
 echo Decoding osm_trunk
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Road --line-width 18 $PWD/work/osm_trunk $PWD/data/shapefiles/osm_trunk
+#$tg/ogr-decode --max-segment 500 --area-type Road --line-width 18 $PWD/work/osm_trunk $PWD/data/shapefiles/osm_trunk
 echo Decoding osm_primary
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Road --line-width 16 $PWD/work/osm_primary $PWD/data/shapefiles/osm_primary
+#$tg/ogr-decode --max-segment 500 --area-type Road --line-width 16 $PWD/work/osm_primary $PWD/data/shapefiles/osm_primary
 echo Decoding osm_secondary
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Road --line-width 12 $PWD/work/osm_secondary $PWD/data/shapefiles/osm_secondary
+#$tg/ogr-decode --max-segment 500 --area-type Road --line-width 12 $PWD/work/osm_secondary $PWD/data/shapefiles/osm_secondary
 echo Decoding osm_tertiary
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_tertiary $PWD/data/shapefiles/osm_tertiary
+#$tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_tertiary $PWD/data/shapefiles/osm_tertiary
 #echo Decoding osm_unclassified
 #echo $(date)
 #$tg/ogr-decode --max-segment 500 --area-type Road --line-width 7 $PWD/work/osm_unclassified $PWD/data/shapefiles/osm_unclassified
@@ -110,25 +110,25 @@ echo $(date)
 $tg/ogr-decode --max-segment 500 --area-type DeciduousForest $PWD/work/osm_forest $PWD/data/shapefiles/osm_forest
 echo Decoding osm_water_river
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Stream --line-width 10 $PWD/work/osm_water_river $PWD/data/shapefiles/osm_water_river
+#$tg/ogr-decode --max-segment 500 --area-type Stream --line-width 10 $PWD/work/osm_water_river $PWD/data/shapefiles/osm_water_river
 echo Decoding osm_water_canal
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Stream --line-width 10 $PWD/work/osm_water_canal $PWD/data/shapefiles/osm_water_canal
+#$tg/ogr-decode --max-segment 500 --area-type Stream --line-width 10 $PWD/work/osm_water_canal $PWD/data/shapefiles/osm_water_canal
 echo Decoding osm_water_stream
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Stream --line-width 5 $PWD/work/osm_water_stream $PWD/data/shapefiles/osm_water_stream
+#$tg/ogr-decode --max-segment 500 --area-type Stream --line-width 5 $PWD/work/osm_water_stream $PWD/data/shapefiles/osm_water_stream
 echo Decoding osm_railway
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 8 $PWD/work/osm_railway $PWD/data/shapefiles/osm_railway
+#$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 8 $PWD/work/osm_railway $PWD/data/shapefiles/osm_railway
 echo Decoding osm_railway_siding
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_railway_siding $PWD/data/shapefiles/osm_railway_siding
+#$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_railway_siding $PWD/data/shapefiles/osm_railway_siding
 echo Decoding osm_railway_spur
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_railway_spur $PWD/data/shapefiles/osm_railway_spur
+#$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_railway_spur $PWD/data/shapefiles/osm_railway_spur
 echo Decoding osm_tram
 echo $(date)
-$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_tram $PWD/data/shapefiles/osm_tram
+#$tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_tram $PWD/data/shapefiles/osm_tram
 echo Decoding osm_industrial
 echo $(date)
 $tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
