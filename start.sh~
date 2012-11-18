@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ptp=$(pwd)
 ############################################
 # Put here path to your terragear binaries #
 ############################################
@@ -42,5 +43,5 @@ then
 	sh update.sh -t $tg
 fi
 
-cd osm2fg
+cd $ptp/osm2fg
 sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg
