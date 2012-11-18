@@ -6,12 +6,6 @@
 tg=${HOME}/fgfs/install/terragear/bin
 ############################################
 
-sh update.sh -t $tg
-
-if [ -f $PWD/first.run ]
-then
-    sh first_run.sh
-fi
 
 echo "Starting at:">terrlog.txt
 echo $(date)>>terrlog.txt
