@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Start generating OSM buildings at: $(date)">>terrlog.txt
+echo "$(date): Start generating OSM buildings">>terrlog.txt
 
 while getopts "n:s:w:e:" OPTION
 do
@@ -57,7 +57,7 @@ while read LINE; do
     ((count++))
 done
 echo Number of elements in $j.$x-$i.$y-$j.$xi-$i.$yi.osm: ${#ARRAY[@]}
-echo "Number of elements in $j.$x-$i.$y-$j.$xi-$i.$yi.osm: ${#ARRAY[@]}">>terrlog.txt
+echo "$(date): Number of elements in $j.$x-$i.$y-$j.$xi-$i.$yi.osm: ${#ARRAY[@]}">>terrlog.txt
 num=${#ARRAY[@]}
 totalsum=$(($totalsum+$num))
 exec 0<&10 10<&-
@@ -65,7 +65,7 @@ exec 0<&10 10<&-
 k=0
 while [ $k -lt "$num" ]
 do
-	echo "Processing element number $k: ${ARRAY[k]}"
+	echo "Processing element number $k of $num: ${ARRAY[k]}"
 	perl bob.pl -w ${ARRAY[k]} -f "$j.$x-$i.$y-$j.$xi-$i.$yi.osm"
 	k=$(($k+1))
 done
@@ -83,5 +83,5 @@ unset ARRAY
 done
 
 rm -rf $PWD/*.osm
-echo "Total number of buildings is $totalsum">>terrlog.txt
-echo "Finish at: $(date)">>terrlog.txt
+echo "$(date): Total number of buildings is $totalsum">>terrlog.txt
+echo "$(date): Finish of building generation">>terrlog.txt
