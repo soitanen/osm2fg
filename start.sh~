@@ -12,8 +12,9 @@ s=59
 w=30
 e=31
 update="n"
+osmbuild="n"
 
-while getopts "n:s:w:e:u:" OPTION
+while getopts "n:s:w:e:u:b:" OPTION
 do
      case $OPTION in
          n)
@@ -30,6 +31,9 @@ do
              ;;
          u)
              update=$OPTARG
+             ;;
+         b)
+             osmbuild=$OPTARG
              ;;
      esac
 done
@@ -48,3 +52,11 @@ fi
 
 cd $ptp/osm2fg
 sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg
+
+cd $ptp
+
+if [ "$osmbuild" -eq "y" ]
+then
+	cd osm2fg
+	sh osm_build.sh -n $n -s $s -w $w -e $e
+fi
