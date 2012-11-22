@@ -24,12 +24,12 @@ do
 done
 
 # cutting shapefiles
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/highway-line-cut.shp $PWD/$dir/highway-line.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/landuse-polygon-cut.shp $PWD/$dir/landuse-polygon.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/poi-polygon-cut.shp $PWD/$dir/poi-polygon.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/railway-line-cut.shp $PWD/$dir/railway-line.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/surface-polygon-cut.shp $PWD/$dir/surface-polygon.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/vegetation-polygon-cut.shp $PWD/$dir/vegetation-polygon.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/water-polygon-cut.shp $PWD/$dir/water-polygon.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/$dir/water-line-cut.shp $PWD/$dir/water-line.shp
-ogr2ogr -skipfailures -clipsrc $w $s $e $n $PWD/osm_coastline/land_polygons-cut.shp $PWD/land-polygons-split-4326/land_polygons.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/highway-line-cut.shp $PWD/$dir/highway-line.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/landuse-polygon-cut.shp $PWD/$dir/landuse-polygon.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/poi-polygon-cut.shp $PWD/$dir/poi-polygon.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/railway-line-cut.shp $PWD/$dir/railway-line.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/surface-polygon-cut.shp $PWD/$dir/surface-polygon.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/vegetation-polygon-cut.shp $PWD/$dir/vegetation-polygon.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/water-polygon-cut.shp $PWD/$dir/water-polygon.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/$dir/water-line-cut.shp $PWD/$dir/water-line.shp
+ogr2ogr -lco ENCODING=UTF-8 -skipfailures -clipsrc $w $s $e $n $PWD/osm_coastline/land_polygons-cut.shp $PWD/land-polygons-split-4326/land_polygons.shp
