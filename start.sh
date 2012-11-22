@@ -11,6 +11,7 @@ n=60
 s=59
 w=30
 e=31
+update="n"
 
 while getopts "n:s:w:e:u:" OPTION
 do
@@ -40,7 +41,7 @@ then
 	sh first_run.sh
 fi
 
-if [ $update -eq "y"]
+if [ "$update" -eq "y" ]
 then
 	sh $PWD/osm2fg/update.sh -t $tg -p $ptp
 fi
