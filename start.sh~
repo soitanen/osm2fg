@@ -13,8 +13,9 @@ w=30
 e=31
 update="n"
 osmbuild="n"
+terrain="y"
 
-while getopts "n:s:w:e:u:b:" OPTION
+while getopts "n:s:w:e:u:b:t:" OPTION
 do
      case $OPTION in
          n)
@@ -35,6 +36,9 @@ do
          b)
              osmbuild=$OPTARG
              ;;
+         t)
+             terrain=$OPTARG
+             ;;
      esac
 done
 
@@ -45,17 +49,20 @@ then
 	sh first_run.sh
 fi
 
-if [ "$update" -eq "y" ]
+if [ "$update" == "y" ]
 then
 	sh $PWD/osm2fg/update.sh -t $tg -p $ptp
 fi
 
-cd $ptp/osm2fg
-sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg
+if [ "$terrain" == "y" ]
+then
+	cd $ptp/osm2fg
+	sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg
+fi
 
 cd $ptp
 
-if [ "$osmbuild" -eq "y" ]
+if [ "$osmbuild" == "y" ]
 then
 	cd osm2fg
 	sh osm_build.sh -n $n -s $s -w $w -e $e

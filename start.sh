@@ -65,5 +65,5 @@ cd $ptp
 if [ "$osmbuild" == "y" ]
 then
 	cd osm2fg
-	sh osm_build.sh -n $n -s $s -w $w -e $e
+	bash osm_build.sh -n $n -s $s -w $w -e $e
 fi
