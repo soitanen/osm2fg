@@ -22,8 +22,8 @@ do
 done
 
 
-echo "Starting at:">terrlog.txt
-echo $(date)>>terrlog.txt
+echo "$(date): Starting generating terrain">terrlog.txt
+
 
 # height downloading and generation it in needed format
 sh height_gen.sh -n $n -s $s -w $w -e $e -t $tg
@@ -32,5 +32,4 @@ sh airport_gen.sh -n $n -s $s -w $w -e $e -t $tg
 # generate terrain block in area
 sh block_gen.sh -n $n -s $s -w $w -e $e -t $tg
 
-echo "Finish generating terrain at:">>terrlog.txt
-echo $(date)>>terrlog.txt
+echo "$(date): Finish generating terrain">>terrlog.txt
