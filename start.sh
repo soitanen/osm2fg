@@ -71,6 +71,7 @@ then
 fi
 
 cd $ptp
+cd osm2fg
 
 if [ -f $PWD/finish.wav ]
 then

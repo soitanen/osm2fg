@@ -69,3 +69,10 @@ then
 	cd osm2fg
 	bash osm_build.sh -n $n -s $s -w $w -e $e
 fi
+
+cd $ptp
+
+if [ -f $PWD/finish.wav ]
+then
+	play finish.wav
+fi
