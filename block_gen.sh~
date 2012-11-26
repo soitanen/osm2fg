@@ -25,10 +25,12 @@ echo $n $s $w $e>>terrlog.txt
 
 i=$s
 
-echo "$(date): sh decode.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt
+echo "sh decode.sh -n $n -s $s -w $w -e $e -t $tg at:">>terrlog.txt
+echo $(date)>>terrlog.txt
 sh decode.sh -n $n -s $s -w $w -e $e -t $tg
 
-echo "$(date): sh terrain_gen.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt
+echo "sh terrain_gen.sh -n $n -s $s -w $w -e $e -t $tg at:">>terrlog.txt
+echo $(date)>>terrlog.txt
 sh terrain_gen.sh -n $n -s $s -w $w -e $e -t $tg
 
 while [ $i -lt $n ]

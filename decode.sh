@@ -54,95 +54,65 @@ rm -rf $PWD/work/osm_service
 rm -rf $PWD/work/osm_raceway
 rm -rf $PWD/work/osm_sand
 
-echo Decoding osm_coastline into landmass
-echo $(date)
+echo $(date) Decoding osm_coastline into landmass
 $tg/ogr-decode --max-segment 500 --area-type Default $PWD/work/landmass $PWD/data/shapefiles/osm_coastline
-echo Decoding osm_coastline into grass
-echo $(date)
+echo $(date) Decoding osm_coastline into grass
 $tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
-echo Decoding osm_motorway
-echo $(date)
+echo $(date) Decoding osm_motorway
 $tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
-echo Decoding osm_links
-echo $(date)
+echo $(date) Decoding osm_links
 $tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_motorway_link $PWD/data/shapefiles/osm_motorway_link
-echo Decoding osm_trunk
-echo $(date)
+echo $(date) Decoding osm_trunk
 $tg/ogr-decode --max-segment 500 --area-type Road --line-width 18 $PWD/work/osm_trunk $PWD/data/shapefiles/osm_trunk
-echo Decoding osm_primary
-echo $(date)
+echo $(date) Decoding osm_primary
 $tg/ogr-decode --max-segment 500 --area-type Road --line-width 16 $PWD/work/osm_primary $PWD/data/shapefiles/osm_primary
-echo Decoding osm_secondary
-echo $(date)
+echo $(date) Decoding osm_secondary
 $tg/ogr-decode --max-segment 500 --area-type Road --line-width 12 $PWD/work/osm_secondary $PWD/data/shapefiles/osm_secondary
-echo Decoding osm_tertiary
-echo $(date)
+echo $(date) Decoding osm_tertiary
 $tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_tertiary $PWD/data/shapefiles/osm_tertiary
-#echo Decoding osm_unclassified
-#echo $(date)
+#echo $(date) Decoding osm_unclassified
 #$tg/ogr-decode --max-segment 500 --area-type Road --line-width 7 $PWD/work/osm_unclassified $PWD/data/shapefiles/osm_unclassified
-#echo Decoding osm_residential
-#echo $(date)
+#echo $(date) Decoding osm_residential
 #$tg/ogr-decode --max-segment 500 --area-type Road --line-width 7 $PWD/work/osm_residential $PWD/data/shapefiles/osm_residential
-#echo Decoding osm_service
-#echo $(date)
+#echo $(date) Decoding osm_service
 #$tg/ogr-decode --max-segment 500 --area-type Road --line-width 5 $PWD/work/osm_service $PWD/data/shapefiles/osm_service
-echo Decoding osm_raceway
-echo $(date)
+echo $(date) Decoding osm_raceway
 $tg/ogr-decode --max-segment 500 --area-type Road --line-width 12 --texture-lines $PWD/work/osm_raceway $PWD/data/shapefiles/osm_raceway
-echo Decoding osm_water_poly
-echo $(date)
+echo $(date) Decoding osm_water_poly
 $tg/ogr-decode --max-segment 500 --area-type Lake $PWD/work/osm_water_poly $PWD/data/shapefiles/osm_water_poly
-echo Decoding osm_marsh
-echo $(date)
+echo $(date) Decoding osm_marsh
 $tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
-echo Decoding osm_heath
-echo $(date)
+echo $(date) Decoding osm_heath
 $tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
-echo Decoding osm_scrub
-echo $(date)
+echo $(date) Decoding osm_scrub
 $tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
-echo Decoding osm_urban
-echo $(date)
+echo $(date) Decoding osm_urban
 $tg/ogr-decode --max-segment 500 --area-type Town $PWD/work/osm_urban $PWD/data/shapefiles/osm_urban
-echo Decoding osm_forest
-echo $(date)
+echo $(date) Decoding osm_forest
 $tg/ogr-decode --max-segment 500 --area-type DeciduousForest $PWD/work/osm_forest $PWD/data/shapefiles/osm_forest
-echo Decoding osm_water_river
-echo $(date)
+echo $(date) Decoding osm_water_river
 $tg/ogr-decode --max-segment 500 --area-type Stream --line-width 10 $PWD/work/osm_water_river $PWD/data/shapefiles/osm_water_river
-echo Decoding osm_water_canal
-echo $(date)
+echo $(date) Decoding osm_water_canal
 $tg/ogr-decode --max-segment 500 --area-type Stream --line-width 10 $PWD/work/osm_water_canal $PWD/data/shapefiles/osm_water_canal
-echo Decoding osm_water_stream
-echo $(date)
+echo $(date) Decoding osm_water_stream
 $tg/ogr-decode --max-segment 500 --area-type Stream --line-width 5 $PWD/work/osm_water_stream $PWD/data/shapefiles/osm_water_stream
-echo Decoding osm_railway
-echo $(date)
+echo $(date) Decoding osm_railway
 $tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 8 $PWD/work/osm_railway $PWD/data/shapefiles/osm_railway
-echo Decoding osm_railway_siding
-echo $(date)
+echo $(date) Decoding osm_railway_siding
 $tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_railway_siding $PWD/data/shapefiles/osm_railway_siding
-echo Decoding osm_railway_spur
-echo $(date)
+echo $(date) Decoding osm_railway_spur
 $tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_railway_spur $PWD/data/shapefiles/osm_railway_spur
-echo Decoding osm_tram
-echo $(date)
+echo $(date) Decoding osm_tram
 $tg/ogr-decode --max-segment 500 --area-type Railroad --line-width 4 $PWD/work/osm_tram $PWD/data/shapefiles/osm_tram
-echo Decoding osm_industrial
-echo $(date)
+echo $(date) Decoding osm_industrial
 $tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
-echo Decoding osm_meadow
-echo $(date)
+echo $(date) Decoding osm_meadow
 $tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
-echo Decoding osm_farm
-echo $(date)
+echo $(date) Decoding osm_farm
 $tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
-#echo Decoding osm_parking
-#echo $(date)
+#echo $(date) Decoding osm_parking
 #$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
-echo Decoding osm_sand
-echo $(date)
+echo $(date) Decoding osm_sand
 $tg/ogr-decode --max-segment 500 --area-type Sand $PWD/work/osm_sand $PWD/data/shapefiles/osm_sand
 
 #That was old version using shape-decode
