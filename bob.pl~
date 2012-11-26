@@ -594,10 +594,10 @@ open(STG,">>$stgfile");
 #print STG "#tile: $tile\n";
 if ($wrapper)
 {
-  print STG "OBJECT_STATIC_AGL osm".$wayid.".xml ".$reflon." ".$reflat." 0.0 180 0.0 0.0\n";
+  print STG "OBJECT_STATIC osm".$wayid.".xml ".$reflon." ".$reflat." -9999 180\n";
 } else
 {
-  print STG "OBJECT_STATIC_AGL osm".$wayid.".ac ".$reflon." ".$reflat." 0.0 180 0.0 0.0\n";
+  print STG "OBJECT_STATIC osm".$wayid.".ac ".$reflon." ".$reflat." -9999 180\n";
 };
 close(STG);
 

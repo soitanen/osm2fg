@@ -83,7 +83,5 @@ unset ARRAY
 done
 
 rm -rf $PWD/*.osm
-mv $PWD/Output/Objects $PWD/output/
-rm -rf $PWD/Output
 echo "$(date): Total number of buildings is $totalsum">>terrlog.txt
 echo "$(date): Finish of building generation">>terrlog.txt
