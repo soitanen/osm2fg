@@ -49,6 +49,8 @@ then
 	sh first_run.sh
 fi
 
+cd $ptp
+
 if [ "$update" == "y" ]
 then
 	sh $PWD/osm2fg/update.sh -t $tg -p $ptp
