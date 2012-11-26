@@ -1,8 +1,5 @@
 sudo apt-get update
-sudo apt-get install p7zip
-sudo apt-get install gdal-bin
-sudo apt-get install liblwp-protocol-https-perl
-sudo apt-get install libfile-slurp-perl
+sudo apt-get install p7zip gdal-bin liblwp-protocol-https-perl libfile-slurp-perl sox
 
 mkdir output
 mkdir work
