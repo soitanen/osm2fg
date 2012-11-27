@@ -54,8 +54,8 @@ rm -rf $PWD/work/osm_service
 rm -rf $PWD/work/osm_raceway
 rm -rf $PWD/work/osm_sand
 
-echo $(date) Decoding osm_coastline into landmass
-$tg/ogr-decode --max-segment 500 --area-type Default $PWD/work/landmass $PWD/data/shapefiles/osm_coastline
+#echo $(date) Decoding osm_coastline into landmass
+#$tg/ogr-decode --max-segment 500 --area-type Default $PWD/work/landmass $PWD/data/shapefiles/osm_coastline
 echo $(date) Decoding osm_coastline into grass
 $tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 echo $(date) Decoding osm_motorway
