@@ -22,8 +22,6 @@ do
      esac
 done
 
-sh srtm30.sh -n $n -s $s -w $w -e $e -t $tg
-
 #check for northen boundary (SRTM-3 have data only below N60)
 if [ $n -gt 60 ]
 then

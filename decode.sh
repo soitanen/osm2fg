@@ -54,6 +54,44 @@ rm -rf $PWD/work/osm_service
 rm -rf $PWD/work/osm_raceway
 rm -rf $PWD/work/osm_sand
 
+
+if [ -f $tg/shape-decode ]
+then
+
+#That was old version using shape-decode
+#$tg/ogr-decode --max-segment 500 --area-type Default $PWD/work/landmass $PWD/data/shapefiles/osm_coastline
+$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+$tg/shape-decode --max-segment 400 --line-width 18 $PWD/data/shapefiles/osm_motorway/osm_motorway $PWD/work/osm_motorway Road
+$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_motorway_link/osm_links $PWD/work/osm_motorway_link Road
+$tg/shape-decode --max-segment 500 --line-width 18 $PWD/data/shapefiles/osm_trunk/osm_road $PWD/work/osm_trunk Road
+$tg/shape-decode --max-segment 500 --line-width 16 $PWD/data/shapefiles/osm_primary/osm_road $PWD/work/osm_primary Road
+$tg/shape-decode --max-segment 500 --line-width 12 $PWD/data/shapefiles/osm_secondary/osm_road $PWD/work/osm_secondary Road
+$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_tertiary/osm_road $PWD/work/osm_tertiary Road
+$tg/shape-decode --max-segment 500 --line-width 7 $PWD/data/shapefiles/osm_unclassified/osm_road $PWD/work/osm_unclassified Road
+$tg/shape-decode --max-segment 500 --line-width 7 $PWD/data/shapefiles/osm_residential/osm_road $PWD/work/osm_residential Road
+$tg/shape-decode --max-segment 500 --line-width 5 $PWD/data/shapefiles/osm_service/osm_road $PWD/work/osm_service Road
+$tg/shape-decode --max-segment 500 --line-width 12 $PWD/data/shapefiles/osm_raceway/osm_road $PWD/work/osm_raceway Road
+$tg/ogr-decode --max-segment 500 --area-type Lake $PWD/work/osm_water_poly $PWD/data/shapefiles/osm_water_poly
+$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
+$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
+$tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
+$tg/ogr-decode --max-segment 500 --area-type Town $PWD/work/osm_urban $PWD/data/shapefiles/osm_urban
+$tg/ogr-decode --max-segment 500 --area-type DeciduousForest $PWD/work/osm_forest $PWD/data/shapefiles/osm_forest
+$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_water_river/osm_river $PWD/work/osm_water_river Stream
+$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_water_canal/osm_canal $PWD/work/osm_water_canal Stream
+$tg/shape-decode --max-segment 500 --line-width 5 $PWD/data/shapefiles/osm_water_stream/osm_stream $PWD/work/osm_water_stream Stream
+$tg/shape-decode --max-segment 500 --line-width 8 $PWD/data/shapefiles/osm_railway/osm_rail $PWD/work/osm_railway Railroad
+$tg/shape-decode --max-segment 500 --line-width 4 $PWD/data/shapefiles/osm_railway_siding/osm_rail $PWD/work/osm_railway_siding Railroad
+$tg/shape-decode --max-segment 500 --line-width 4 $PWD/data/shapefiles/osm_railway_spur/osm_rail $PWD/work/osm_railway_spur Railroad
+$tg/shape-decode --max-segment 500 --line-width 4 $PWD/data/shapefiles/osm_tram/osm_rail $PWD/work/osm_tram Railroad
+$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
+$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+#$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
+$tg/ogr-decode --max-segment 500 --area-type Sand $PWD/work/osm_sand $PWD/data/shapefiles/osm_sand
+
+else
+
 #echo $(date) Decoding osm_coastline into landmass
 #$tg/ogr-decode --max-segment 500 --area-type Default $PWD/work/landmass $PWD/data/shapefiles/osm_coastline
 echo $(date) Decoding osm_coastline into grass
@@ -115,35 +153,5 @@ $tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD
 echo $(date) Decoding osm_sand
 $tg/ogr-decode --max-segment 500 --area-type Sand $PWD/work/osm_sand $PWD/data/shapefiles/osm_sand
 
-#That was old version using shape-decode
-#$tg/ogr-decode --max-segment 500 --area-type Default $PWD/work/landmass $PWD/data/shapefiles/osm_coastline
-#$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
-#$tg/shape-decode --max-segment 400 --line-width 18 $PWD/data/shapefiles/osm_motorway/osm_motorway $PWD/work/osm_motorway Road
-#$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_motorway_link/osm_links $PWD/work/osm_motorway_link Road
-#$tg/shape-decode --max-segment 500 --line-width 18 $PWD/data/shapefiles/osm_trunk/osm_road $PWD/work/osm_trunk Road
-#$tg/shape-decode --max-segment 500 --line-width 16 $PWD/data/shapefiles/osm_primary/osm_road $PWD/work/osm_primary Road
-#$tg/shape-decode --max-segment 500 --line-width 12 $PWD/data/shapefiles/osm_secondary/osm_road $PWD/work/osm_secondary Road
-#tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_tertiary/osm_road $PWD/work/osm_tertiary Road
-#$tg/shape-decode --max-segment 500 --line-width 7 $PWD/data/shapefiles/osm_unclassified/osm_road $PWD/work/osm_unclassified Road
-#$tg/shape-decode --max-segment 500 --line-width 7 $PWD/data/shapefiles/osm_residential/osm_road $PWD/work/osm_residential Road
-#$tg/shape-decode --max-segment 500 --line-width 5 $PWD/data/shapefiles/osm_service/osm_road $PWD/work/osm_service Road
-#$tg/shape-decode --max-segment 500 --line-width 12 $PWD/data/shapefiles/osm_raceway/osm_road $PWD/work/osm_raceway Road
-#$tg/ogr-decode --max-segment 500 --area-type Lake $PWD/work/osm_water_poly $PWD/data/shapefiles/osm_water_poly
-#$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
-#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
-#tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
-#$tg/ogr-decode --max-segment 500 --area-type Town $PWD/work/osm_urban $PWD/data/shapefiles/osm_urban
-#$tg/ogr-decode --max-segment 500 --area-type DeciduousForest $PWD/work/osm_forest $PWD/data/shapefiles/osm_forest
-#$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_water_river/osm_river $PWD/work/osm_water_river Stream
-#$tg/shape-decode --max-segment 500 --line-width 10 $PWD/data/shapefiles/osm_water_canal/osm_canal $PWD/work/osm_water_canal Stream
-#$tg/shape-decode --max-segment 500 --line-width 5 $PWD/data/shapefiles/osm_water_stream/osm_stream $PWD/work/osm_water_stream Stream
-#$tg/shape-decode --max-segment 500 --line-width 8 $PWD/data/shapefiles/osm_railway/osm_rail $PWD/work/osm_railway Railroad
-#$tg/shape-decode --max-segment 500 --line-width 4 $PWD/data/shapefiles/osm_railway_siding/osm_rail $PWD/work/osm_railway_siding Railroad
-#$tg/shape-decode --max-segment 500 --line-width 4 $PWD/data/shapefiles/osm_railway_spur/osm_rail $PWD/work/osm_railway_spur Railroad
-#$tg/shape-decode --max-segment 500 --line-width 4 $PWD/data/shapefiles/osm_tram/osm_rail $PWD/work/osm_tram Railroad
-#$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
-#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
-#$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
-#$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
-#$tg/ogr-decode --max-segment 500 --area-type Sand $PWD/work/osm_sand $PWD/data/shapefiles/osm_sand
+fi
 
