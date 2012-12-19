@@ -17,7 +17,7 @@ cd ..
 cd ..
 cd ..
 sh download_and_compile.sh OSG
-sh download_and_compile.sh SIMGEAR
+sh download_and_compile.sh -p n SIMGEAR
 sh terragear_download_and_compile.sh TERRAGEAR
 
 cd $ptp
