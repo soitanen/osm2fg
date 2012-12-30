@@ -16,6 +16,9 @@ cd $tg
 cd ..
 cd ..
 cd ..
+
+wget -N http://clemaez.fr/flightgear/terragear_download_and_compile.sh --directory-prefix=$PWD/
+
 sh download_and_compile.sh OSG
 sh download_and_compile.sh -p n SIMGEAR
 sh terragear_download_and_compile.sh TERRAGEAR

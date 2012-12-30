@@ -256,4 +256,10 @@ then
 fi
 
 
-
+#formatting heights from SRTM
+for f in $PWD/data/SRTM-30/*.dem; do $tg/hgtchop 3 $f $PWD/work/SRTM-3; done
+#formatting heights from ASTER GDEM format (if present)
+for f in $PWD/data/ASTER/*.hgt; do $tg/hgtchop 1 $f $PWD/work/SRTM-1; done
+#terrafit - removes some errors and make data more fast
+$tg/terrafit --maxnodes 1000 --maxerror 0.1 $PWD/work/SRTM-3
+$tg/terrafit --maxnodes 1000 --maxerror 0.1 $PWD/work/SRTM-1
