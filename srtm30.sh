@@ -32,7 +32,7 @@ then
 		wi="w180"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30 -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -100 -a "$e" -gt -140 ]
@@ -40,7 +40,7 @@ then
 		wi="w140"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -60 -a "$e" -gt -100 ]
@@ -48,7 +48,7 @@ then
 		wi="w100"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -20 -a "$e" -gt -60 ]
@@ -56,7 +56,7 @@ then
 		wi="w060"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 20 -a "$e" -gt -20 ]
@@ -64,7 +64,7 @@ then
 		wi="w020"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 60 -a "$e" -gt 20 ]
@@ -72,7 +72,7 @@ then
 		wi="e020"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 100 -a "$e" -gt 60 ]
@@ -80,7 +80,7 @@ then
 		wi="e060"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 140 -a "$e" -gt 100 ]
@@ -88,7 +88,7 @@ then
 		wi="e100"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 180 -a "$e" -gt 140 ]
@@ -96,7 +96,7 @@ then
 		wi="e140"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 fi
@@ -109,7 +109,7 @@ then
 		wi="w180"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -100 -a "$e" -gt -140 ]
@@ -117,7 +117,7 @@ then
 		wi="w140"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -60 -a "$e" -gt -100 ]
@@ -125,7 +125,7 @@ then
 		wi="w100"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -20 -a "$e" -gt -60 ]
@@ -133,7 +133,7 @@ then
 		wi="w060"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 20 -a "$e" -gt -20 ]
@@ -141,7 +141,7 @@ then
 		wi="w020"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 60 -a "$e" -gt 20 ]
@@ -149,7 +149,7 @@ then
 		wi="e020"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 100 -a "$e" -gt 60 ]
@@ -157,7 +157,7 @@ then
 		wi="e060"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 140 -a "$e" -gt 100 ]
@@ -165,7 +165,7 @@ then
 		wi="e100"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 180 -a "$e" -gt 140 ]
@@ -173,7 +173,7 @@ then
 		wi="e140"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 fi
@@ -186,7 +186,7 @@ then
 		wi="w180"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -100 -a "$e" -gt -140 ]
@@ -194,7 +194,7 @@ then
 		wi="w140"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -60 -a "$e" -gt -100 ]
@@ -202,7 +202,7 @@ then
 		wi="w100"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt -20 -a "$e" -gt -60 ]
@@ -210,7 +210,7 @@ then
 		wi="w060"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 20 -a "$e" -gt -20 ]
@@ -218,7 +218,7 @@ then
 		wi="w020"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 60 -a "$e" -gt 20 ]
@@ -226,7 +226,7 @@ then
 		wi="e020"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 100 -a "$e" -gt 60 ]
@@ -234,7 +234,7 @@ then
 		wi="e060"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 140 -a "$e" -gt 100 ]
@@ -242,7 +242,7 @@ then
 		wi="e100"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 	if [ "$w" -lt 180 -a "$e" -gt 140 ]
@@ -250,7 +250,7 @@ then
 		wi="e140"
 		hgtfile="$wi""$ni"
                 wget -N http://edcftp.cr.usgs.gov/pub/data/gtopo30/global/$hgtfile.tar.gz --directory-prefix=$PWD/data/SRTM-30/
-                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz
+                tar -xvvzf $PWD/data/SRTM-30/$hgtfile.tar.gz -C $PWD/data/SRTM-30
                 rm $PWD/data/SRTM-30/$hgtfile.tar.gz
 	fi
 fi
