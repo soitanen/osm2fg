@@ -53,7 +53,8 @@ for lat in `seq $s $ni`;
     done
 
 #formatting heights from SRTM
-for f in $PWD/data/SRTM-3/*.hgt; do $tg/hgtchop 3 $f $PWD/work/SRTM-3; done
+#for f in $PWD/data/SRTM-3/*.hgt; do $tg/hgtchop 3 $f $PWD/work/SRTM-3; done
+$tg/gdalchop $PWD/work/SRTM-3 $PWD/data/SRTM-3/*.hgt
 #formatting heights from ASTER GDEM format (if present)
 for f in $PWD/data/ASTER/*.hgt; do $tg/hgtchop 1 $f $PWD/work/SRTM-1; done
 #terrafit - removes some errors and make data more fast
