@@ -33,10 +33,10 @@ rm -rf $PWD/work/Shared
 
 #parsing all airports in area
 echo "$(date): $tg/genapts850 --input=$PWD/data/airports_base/apt.dat --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work">>terrlog.txt
-$tg/genapts850 --input=$PWD/data/airports_base/apt.dat --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
+$tg/genapts850 --threads --input=$PWD/data/airports_base/apt.dat --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
 #parsing airports, that placed in airports folder by hand
 for i in $PWD/data/airports/*.dat
 do
 	echo "$(date): $tg/genapts850 --input=$i --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work">>terrlog.txt
-	$tg/genapts850 --input=$i --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
+	$tg/genapts850 --threads --input=$i --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
 done
