@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #parsing boundaries
-while getopts "n:s:w:e:t:" OPTION
+while getopts "n:s:w:e:t:g:" OPTION
 do
      case $OPTION in
          n)
@@ -19,13 +19,20 @@ do
          t)
              tg=$OPTARG
              ;;
+         g)
+             gtopo=$OPTARG
+             ;;
      esac
 done
 
 rm -rf $PWD/work/SRTM-3
 rm -rf $PWD/work/SRTM-1
 
-sh srtm30.sh -n $n -s $s -w $w -e $e -t $tg
+if [ "$gtopo" == "y" ]
+then
+	sh srtm30.sh -n $n -s $s -w $w -e $e -t $tg
+fi
+
 
 #check for northen boundary (SRTM-3 have data only below N60)
 if [ $n -gt 60 ]

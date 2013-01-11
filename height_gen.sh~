@@ -22,6 +22,9 @@ do
      esac
 done
 
+rm -rf $PWD/work/SRTM-3
+rm -rf $PWD/work/SRTM-1
+
 sh srtm30.sh -n $n -s $s -w $w -e $e -t $tg
 
 #check for northen boundary (SRTM-3 have data only below N60)
@@ -32,8 +35,7 @@ fi
 
 ni=$((n-1))
 ei=$((e-1))
-rm -rf $PWD/work/SRTM-3
-rm -rf $PWD/work/SRTM-1
+
 
 #downloading hgt files from server
 for lat in `seq $s $ni`;

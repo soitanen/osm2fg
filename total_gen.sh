@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts "n:s:w:e:t:" OPTION
+while getopts "n:s:w:e:t:g:" OPTION
 do
      case $OPTION in
          n)
@@ -18,6 +18,9 @@ do
          t)
              tg=$OPTARG
              ;;
+         g)
+             gtopo=$OPTARG
+             ;;
      esac
 done
 
@@ -27,7 +30,7 @@ echo "$(date): Starting generating terrain">terrlog.txt
 
 # height downloading and generation it in needed format
 echo "$(date): Starting generating heights sh height_gen.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt
-sh height_gen.sh -n $n -s $s -w $w -e $e -t $tg
+bash height_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo
 # generation of airports in area + selected airports in folder
 echo "$(date): Starting generating airports sh airport_gen.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt
 sh airport_gen.sh -n $n -s $s -w $w -e $e -t $tg

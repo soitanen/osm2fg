@@ -46,4 +46,4 @@ git pull
 				
 
 cd ..
-
+cp $PWD/osm2fg/start.sh $PWD/start.sh
