@@ -4,7 +4,7 @@ ptp=$(pwd)
 ############################################
 # Put here path to your terragear binaries #
 ############################################
-tg=${HOME}/fgfs/install/terragear/bin
+read tg <tgpath.txt
 ############################################
 
 n=60

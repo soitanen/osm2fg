@@ -18,7 +18,7 @@ Open file start.sh in any text editor and edit path to your Terragear binaries.
 Usage:
 - Run Terminal
 - Change directory to /home/your_name/osm2fg/ (if you unzipped or obtained from git in that directory)
-- run "bash start.sh -n xx -s xx -w xx -e xx -u y/n -b y/n -t y/n -g y/n" where:
+- run "bash start.sh -n xx -s xx -w xx -e xx -u y/n -b y/n -t y/n -g y/n -i 1234567 -l 1/2/3/4/5" where:
   -n xx - nothern boundary of genereated area
   -s xx - southern boundary of genereated area
   -w xx - western boundary of genereated area
@@ -37,6 +37,12 @@ Usage:
   -g y/n - default: n
 	   If YES, script will use GTOPO30 elevation data, where SRTM-3 or ASTER is not present.
 	   If NO, script will use only SRTM-3 data and manualy putted ASTER data in *.hgt format.
+  -i 1234567
+	   If number is set here, script will generate only one tile with present id. Make effect only on terrain, not for OSM building. Coordinates do not computed automatically.
+	   If key -i is not used, script will generate all area in BBOX.
+  -l 1/2/3/4/5 - default: 3
+	   Level od detail from 1 (spase) to 5 (dense).
+	   
 
 Script will create folder osm2fg inside installation folder. All needed data will automaticly downloaded.
 After finish you will hear "Fasten seatbelt" sound from Airbus.

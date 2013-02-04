@@ -11,9 +11,9 @@ Installation:
 a) If downloaded in archive:
    - unzip in any folder (ex. /home/your_name/osm2fg/)
 b) Obtained from git:
-   - just see Usage section. You can even delete files and folders except start.sh, first.run and this README
+   - just see Usage section. You can even delete files and folders except start.sh, first.run, tgpath.txt and this README
 General:
-Open file start.sh in any text editor and edit path to your Terragear binaries.
+Open file tgpath.txt in any text editor and edit path to your Terragear binaries.
 
 Usage:
 - Run Terminal
