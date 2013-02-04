@@ -15,8 +15,10 @@ update="n"
 osmbuild="n"
 terrain="y"
 gtopo="n"
+tileid=0
+lod=3
 
-while getopts "n:s:w:e:u:b:t:g:" OPTION
+while getopts "n:s:w:e:u:b:t:g:i:l:" OPTION
 do
      case $OPTION in
          n)
@@ -43,6 +45,12 @@ do
          g)
              gtopo=$OPTARG
              ;;
+         i)
+             tileid=$OPTARG
+             ;;
+         l)
+             lod=$OPTARG
+             ;;
      esac
 done
 
@@ -63,7 +71,7 @@ fi
 if [ "$terrain" == "y" ]
 then
 	cd $ptp/osm2fg
-	sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo
+	sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo -i $tileid -l $lod
 fi
 
 cd $ptp
