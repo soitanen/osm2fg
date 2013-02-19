@@ -1709,34 +1709,34 @@ mkdir osm_farm
 mkdir osm_parking
 mkdir osm_sand
 
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='motorway'" $PWD/osm_motorway/osm_motorway.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='motorway_link' OR HIGHWAY='primary_link' OR HIGHWAY='secondary_link' OR HIGHWAY='tertiary_link' OR HIGHWAY='trunk_link'" $PWD/osm_motorway_link/osm_links.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='trunk'" $PWD/osm_trunk/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='primary'" $PWD/osm_primary/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='secondary'" $PWD/osm_secondary/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='tertiary'" $PWD/osm_tertiary/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='service'" $PWD/osm_service/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='unclassified'" $PWD/osm_unclassified/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='residential'" $PWD/osm_residential/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "TUNNEL!='yes' AND HIGHWAY='raceway'" $PWD/osm_raceway/osm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "NATURAL='water' OR WATERWAY='riverbank'" $PWD/osm_water_poly/osm_water.shp $PWD/OUT/water-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "NATURAL='wetland'" $PWD/osm_marsh/osm_marsh.shp $PWD/OUT/water-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "NATURAL='heath'" $PWD/osm_heath/osm_heath.shp $PWD/OUT/vegetation-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "NATURAL='scrub'" $PWD/osm_scrub/osm_scrub.shp $PWD/OUT/vegetation-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "LANDUSE='allotments' OR LANDUSE='residential'" $PWD/osm_urban/osm_urban.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "NATURAL='wood' OR LANDUSE='forest'" $PWD/osm_forest/osm_forest.shp $PWD/OUT/vegetation-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "NATURAL='beach' or NATURAL='sand'" $PWD/osm_sand/osm_sand.shp $PWD/OUT/surface-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "WATERWAY='river'" $PWD/osm_water_river/osm_river.shp $PWD/OUT/water-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "WATERWAY='canal'" $PWD/osm_water_canal/osm_canal.shp $PWD/OUT/water-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "WATERWAY='stream'" $PWD/osm_water_stream/osm_stream.shp $PWD/OUT/water-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "RAILWAY='rail'" $PWD/osm_railway/osm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "RAILWAY='siding'" $PWD/osm_railway_siding/osm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "RAILWAY='spur'" $PWD/osm_railway_spur/osm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "RAILWAY='tram'" $PWD/osm_tram/osm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "LANDUSE='industrial'" $PWD/osm_industrial/osm_industrial.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "LANDUSE='meadow'" $PWD/osm_meadow/osm_meadow.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "LANDUSE='farm' OR LANDUSE='farmland' OR LANDUSE='farmyard'" $PWD/osm_farm/osm_farm.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -lco ENCODING=UTF-8 -where "AMENITY='parking'" $PWD/osm_parking/osm_parking.shp $PWD/OUT/poi-polygon-cut.shp
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway'" $PWD/osm_motorway/mosm_motorway.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway_link' OR HIGHWAY='primary_link' OR HIGHWAY='secondary_link' OR HIGHWAY='tertiary_link' OR HIGHWAY='trunk_link'" $PWD/osm_motorway_link/mosm_links.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='trunk'" $PWD/osm_trunk/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='primary'" $PWD/osm_primary/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='secondary'" $PWD/osm_secondary/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='tertiary'" $PWD/osm_tertiary/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='service'" $PWD/osm_service/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='unclassified'" $PWD/osm_unclassified/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='residential'" $PWD/osm_residential/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='raceway'" $PWD/osm_raceway/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "NATURAL='water' OR WATERWAY='riverbank'" $PWD/osm_water_poly/mosm_water.shp $PWD/OUT/water-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "WETLAND='bog' OR WETLAND='marsh' or WETLAND='swamp'" $PWD/osm_marsh/mosm_marsh.shp $PWD/OUT/water-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "NATURAL='heath'" $PWD/osm_heath/mosm_heath.shp $PWD/OUT/vegetation-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "NATURAL='scrub'" $PWD/osm_scrub/mosm_scrub.shp $PWD/OUT/vegetation-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "LANDUSE='allotments' OR LANDUSE='residential'" $PWD/osm_urban/mosm_urban.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "NATURAL='wood' OR LANDUSE='forest'" $PWD/osm_forest/mosm_forest.shp $PWD/OUT/vegetation-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "NATURAL='beach' or NATURAL='sand'" $PWD/osm_sand/mosm_sand.shp $PWD/OUT/surface-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "WATERWAY='river'" $PWD/osm_water_river/mosm_river.shp $PWD/OUT/water-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "WATERWAY='canal'" $PWD/osm_water_canal/mosm_canal.shp $PWD/OUT/water-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "WATERWAY='stream'" $PWD/osm_water_stream/mosm_stream.shp $PWD/OUT/water-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "RAILWAY='rail'" $PWD/osm_railway/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "RAILWAY='siding'" $PWD/osm_railway_siding/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "RAILWAY='spur'" $PWD/osm_railway_spur/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "RAILWAY='tram'" $PWD/osm_tram/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "LANDUSE='industrial'" $PWD/osm_industrial/mosm_industrial.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "LANDUSE='meadow'" $PWD/osm_meadow/mosm_meadow.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "LANDUSE='farm' OR LANDUSE='farmland' OR LANDUSE='farmyard'" $PWD/osm_farm/mosm_farm.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "AMENITY='parking'" $PWD/osm_parking/mosm_parking.shp $PWD/OUT/poi-polygon-cut.shp -lco ENCODING=UTF-8
 
 rm -rf OUT
 
@@ -1769,6 +1769,67 @@ rm -rf $ptp/data/shapefiles/osm_meadow
 rm -rf $ptp/data/shapefiles/osm_farm
 rm -rf $ptp/data/shapefiles/osm_parking
 rm -rf $ptp/data/shapefiles/osm_sand
+
+#sh multi.sh
+#python ogr_multipart_to_singlepart.py $PWD/osm_coastline/mland_polygons-cut.shp $PWD/osm_coastline/land_polygons-cut.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_motorway/mosm_motorway.shp $PWD/osm_motorway/osm_motorway.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_motorway_link/mosm_links.shp $PWD/osm_motorway_link/osm_links.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_trunk/mosm_road.shp $PWD/osm_trunk/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_primary/mosm_road.shp $PWD/osm_primary/osm_road.shp
+#ython ogr_multipart_to_singlepart.py $PWD/osm_secondary/mosm_road.shp $PWD/osm_secondary/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_tertiary/mosm_road.shp $PWD/osm_tertiary/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_service/mosm_road.shp $PWD/osm_service/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_unclassified/mosm_road.shp $PWD/osm_unclassified/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_residential/mosm_road.shp $PWD/osm_residential/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_raceway/mosm_road.shp $PWD/osm_raceway/osm_road.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_water_poly/mosm_water.shp $PWD/osm_water_poly/osm_water.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_marsh/mosm_marsh.shp $PWD/osm_marsh/osm_marsh.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_heath/mosm_heath.shp $PWD/osm_heath/osm_heath.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_scrub/mosm_scrub.shp $PWD/osm_scrub/osm_scrub.shp
+#ython ogr_multipart_to_singlepart.py $PWD/osm_urban/mosm_urban.shp $PWD/osm_urban/osm_urban.shp
+#ython ogr_multipart_to_singlepart.py $PWD/osm_forest/mosm_forest.shp $PWD/osm_forest/osm_forest.shp
+#ython ogr_multipart_to_singlepart.py $PWD/osm_sand/mosm_sand.shp $PWD/osm_sand/osm_sand.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_water_river/mosm_river.shp $PWD/osm_water_river/osm_river.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_water_canal/mosm_canal.shp $PWD/osm_water_canal/osm_canal.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_water_stream/mosm_stream.shp $PWD/osm_water_stream/osm_stream.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_railway/mosm_rail.shp $PWD/osm_railway/osm_rail.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_railway_siding/mosm_rail.shp $PWD/osm_railway_siding/osm_rail.shp
+#ython ogr_multipart_to_singlepart.py $PWD/osm_railway_spur/mosm_rail.shp $PWD/osm_railway_spur/osm_rail.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_tram/mosm_rail.shp $PWD/osm_tram/osm_rail.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_industrial/mosm_industrial.shp $PWD/osm_industrial/osm_industrial.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_meadow/mosm_meadow.shp $PWD/osm_meadow/osm_meadow.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_farm/mosm_farm.shp $PWD/osm_farm/osm_farm.shp
+#python ogr_multipart_to_singlepart.py $PWD/osm_parking/mosm_parking.shp $PWD/osm_parking/osm_parking.shp
+
+#rm -rf $PWD/osm_coastline/mland_polygons-cut.*
+#rm -rf $PWD/osm_motorway/mosm_motorway.*
+#rm -rf $PWD/osm_motorway_link/mosm_links.*
+#rm -rf $PWD/osm_trunk/mosm_road.*
+#rm -rf $PWD/osm_primary/mosm_road.*
+#rm -rf $PWD/osm_secondary/mosm_road.*
+#rm -rf $PWD/osm_tertiary/mosm_road.*
+#rm -rf $PWD/osm_service/mosm_road.*
+#rm -rf $PWD/osm_unclassified/mosm_road.*
+#rm -rf $PWD/osm_residential/mosm_road.*
+#rm -rf $PWD/osm_raceway/mosm_road.*
+#rm -rf $PWD/osm_water_poly/mosm_water.*
+#rm -rf $PWD/osm_marsh/mosm_marsh.*
+#rm -rf $PWD/osm_heath/mosm_heath.*
+#rm -rf $PWD/osm_scrub/mosm_scrub.*
+#rm -rf $PWD/osm_urban/mosm_urban.*
+#rm -rf $PWD/osm_forest/mosm_forest.*
+#rm -rf $PWD/osm_sand/mosm_sand.*
+#rm -rf $PWD/osm_water_river/mosm_river.*
+#rm -rf $PWD/osm_water_canal/mosm_canal.*
+#rm -rf $PWD/osm_water_stream/mosm_stream.*
+#rm -rf $PWD/osm_railway/mosm_rail.*
+#rm -rf $PWD/osm_railway_siding/mosm_rail.*
+#rm -rf $PWD/osm_railway_spur/mosm_rail.*
+#rm -rf $PWD/osm_tram/mosm_rail.*
+#rm -rf $PWD/osm_industrial/mosm_industrial.*
+#rm -rf $PWD/osm_meadow/mosm_meadow.*
+#rm -rf $PWD/osm_farm/mosm_farm.*
+#rm -rf $PWD/osm_parking/mosm_parking.*
 
 mv $PWD/osm_coastline $ptp/data/shapefiles/
 mv $PWD/osm_motorway $ptp/data/shapefiles/
