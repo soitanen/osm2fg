@@ -57,7 +57,7 @@ for lat in `seq $s $ni`;
 		fi
                 wget -N http://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/$hgtfile --directory-prefix=$PWD/data/SRTM-3/
                 unzip -uo $PWD/data/SRTM-3/$hgtfile -d $PWD/data/SRTM-3/
-                rm $PWD/data/SRTM-3/$hgtfile
+                #rm $PWD/data/SRTM-3/$hgtfile
             done
     done
 
@@ -65,9 +65,8 @@ for lat in `seq $s $ni`;
 #for f in $PWD/data/SRTM-3/*.hgt; do $tg/hgtchop 3 $f $PWD/work/SRTM-3; done
 $tg/gdalchop $PWD/work/SRTM-3 $PWD/data/SRTM-3/*.hgt
 #formatting heights from ASTER GDEM format (if present)
-for f in $PWD/data/ASTER/*.hgt; do $tg/hgtchop 1 $f $PWD/work/SRTM-1; done
+$tg/gdalchop $PWD/work/SRTM-3 $PWD/data/ASTER/*
 #terrafit - removes some errors and make data more fast
 $tg/terrafit --maxnodes 1000 --maxerror 0.1 $PWD/work/SRTM-3
-$tg/terrafit --maxnodes 1000 --maxerror 0.1 $PWD/work/SRTM-1
 
 rm -rf $PWD/data/SRTM-3
