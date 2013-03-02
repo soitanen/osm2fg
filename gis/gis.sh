@@ -1677,7 +1677,7 @@ then
 fi
 
 sh cut.sh -n $n -s $s -w $w -e $e -d OUT 
-
+bash landcut.sh -n $n -s $s -w $w -e $e
 rm -rf land-polygons-split-4326
 
 mkdir osm_motorway
