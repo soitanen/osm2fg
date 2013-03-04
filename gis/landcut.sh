@@ -18,6 +18,9 @@ do
      esac
 done
 
+hstep=1000
+vstep=250
+
 i=$s
 while [ $i -lt $n ]
 do
@@ -26,11 +29,11 @@ do
 		do
 		ni=$(($i+1))
 		ej=$(($j+1))
-		y=125
+		y=$vstep
 		while [ $y -lt 1001 ]
 		do
-			x=125
-			ys=$(($y-125))
+			x=$hstep
+			ys=$(($y-$vstep))
 			in=$i
 			yn=$y
 				if [ "$y" -eq 1000 ];
@@ -40,7 +43,7 @@ do
 				fi
 			while [ $x -lt 1001 ]
 			do
-				xw=$(($x-125))
+				xw=$(($x-$hstep))
 				xe=$x
 				je=$j
 				if [ "$x" -eq 1000 ];
@@ -50,9 +53,9 @@ do
 				fi
 #echo ogr2ogr -skipfailures -clipsrc $j.$xw $i.$ys $je.$xe $in.$yn $PWD/osm_coastline/land_polygons-cut_"$j"_"$xw"_"$i"_"$ys".shp $PWD/osm_coastline/land_polygons.shp
 		ogr2ogr -skipfailures -clipsrc $j.$xw $i.$ys $je.$xe $in.$yn $PWD/osm_coastline/land_polygons-cut_"$j"_"$xw"_"$i"_"$ys".shp $PWD/osm_coastline/land_polygons-cut.shp
-				x=$(($x+125))
+				x=$(($x+$hstep))
 			done
-			y=$(($y+125))
+			y=$(($y+$vstep))
 		done
 		j=$(($j+1))
 	done
