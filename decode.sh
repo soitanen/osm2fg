@@ -1,4 +1,4 @@
-while getopts "n:s:w:e:t:l:" OPTION
+while getopts "n:s:w:e:t:l:o:" OPTION
 do
      case $OPTION in
          n)
@@ -19,12 +19,19 @@ do
          l)
              lod=$OPTARG
              ;;
+         o)
+             owndata=$OPTARG
+             ;;
      esac
 done
 ptp=$(pwd)
+
+if [ "$owndata" == "n" ]
+then
 cd gis/
 bash gis.sh -n $n -s $s -w $w -e $e -p $ptp
 cd ..
+fi
 
 rm -rf $PWD/work/landmass
 rm -rf $PWD/work/grass
@@ -61,7 +68,7 @@ rm -rf $PWD/work/osm_sand
 if [ "$lod" -eq 1 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	#echo $(date) Decoding osm_links
@@ -122,7 +129,7 @@ fi
 if [ "$lod" -eq 2 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -183,7 +190,7 @@ fi
 if [ "$lod" -eq 3 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -244,7 +251,7 @@ fi
 if [ "$lod" -eq 4 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -305,7 +312,7 @@ fi
 if [ "$lod" -eq 5 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --max-segment 500 --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links

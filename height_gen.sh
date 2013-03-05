@@ -43,7 +43,6 @@ fi
 ni=$((n-1))
 ei=$((e-1))
 
-
 #downloading hgt files from server
 for lat in `seq $s $ni`;
     do
@@ -61,8 +60,8 @@ for lat in `seq $s $ni`;
             done
     done
 
+
 #formatting heights from SRTM
-#for f in $PWD/data/SRTM-3/*.hgt; do $tg/hgtchop 3 $f $PWD/work/SRTM-3; done
 $tg/gdalchop $PWD/work/SRTM-3 $PWD/data/SRTM-3/*.hgt
 #formatting heights from ASTER GDEM format (if present)
 $tg/gdalchop $PWD/work/SRTM-3 $PWD/data/ASTER/*

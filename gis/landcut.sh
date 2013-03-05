@@ -19,7 +19,7 @@ do
 done
 
 hstep=1000
-vstep=250
+vstep=125
 
 i=$s
 while [ $i -lt $n ]
@@ -27,8 +27,6 @@ do
 	j=$w
 	   while [ $j -lt $e ]
 		do
-		ni=$(($i+1))
-		ej=$(($j+1))
 		y=$vstep
 		while [ $y -lt 1001 ]
 		do

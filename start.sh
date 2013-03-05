@@ -17,8 +17,12 @@ terrain="y"
 gtopo="n"
 tileid=0
 lod=3
+airports="y"
+heights="y"
+decode="y"
+owndata="n"
 
-while getopts "n:s:w:e:u:b:t:g:i:l:" OPTION
+while getopts "n:s:w:e:u:b:t:g:i:l:a:h:d:o:" OPTION
 do
      case $OPTION in
          n)
@@ -51,6 +55,18 @@ do
          l)
              lod=$OPTARG
              ;;
+         a)
+             airports=$OPTARG
+             ;;
+         h)
+             heights=$OPTARG
+             ;;
+         d)
+             decode=$OPTARG
+             ;;
+         o)
+             owndata=$OPTARG
+             ;;
      esac
 done
 
@@ -71,7 +87,7 @@ fi
 if [ "$terrain" == "y" ]
 then
 	cd $ptp/osm2fg
-	sh total_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo -i $tileid -l $lod
+	bash total_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo -i $tileid -l $lod -a $airports -h $heights -d $decode -o $owndata
 fi
 
 cd $ptp
