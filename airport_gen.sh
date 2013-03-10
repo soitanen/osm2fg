@@ -23,8 +23,8 @@ do
 done
 
 #downloading apt.dat
-wget -N http://dev.x-plane.com/update/data/AptNav201208XP900.zip --directory-prefix=$PWD/data/airports_base/
-unzip -uo $PWD/data/airports_base/AptNav201208XP900.zip apt.dat -d $PWD/data/airports_base/
+wget -N http://dev.x-plane.com/update/data/AptNav201303XP900.zip --directory-prefix=$PWD/data/airports_base/
+unzip -uo $PWD/data/airports_base/AptNav201303XP900.zip apt.dat -d $PWD/data/airports_base/
 
 #deleting old data from Work directory
 rm -rf $PWD/work/AirportArea
@@ -39,7 +39,7 @@ svn co http://svn.dev.flightgear.ru/osm-terrain $PWD/data/airports_svn
 #parsing airports, that placed in airports_svn folder
 for i in $PWD/data/airports_svn/*.dat
 do
-	$tg/genapts850 --threads --input=$i --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
+	$tg/genapts850 --threads --max-slope=0.02 --input=$i --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
 done
 
 #parsing airports, that placed in airports folder by hand
