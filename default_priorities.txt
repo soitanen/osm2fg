@@ -63,12 +63,11 @@ CropWood		other	# Cropland/Woodland Mosaic
 AgroForest		other
 Olives			other
 GolfCourse		other	# GolfCourse
-GrassCover		other	# Grassland
-ScrubCover		other	# Scrub
-Scrub			other
+Scrub			other	# Scrub
 ShrubGrassCover		other	# Mixed Shrubland/Grassland
 SavannaCover		other	# Savanna
 Orchard			other	# Orchard
+ShrubCover		other	#
 DeciduousForest		other	# Deciduous Forest
 EvergreenForest		other	# Evergreen Forest
 Airport			other
@@ -79,6 +78,8 @@ BarrenCover		other	# Barren or Sparsely Vegetated
 HerbTundra		other	# Herbaceous Tundra
 Sclerophyllous		other
 Heath			other
+ScrubCover		other
+GrassCover		other	# Grassland
 Grassland		other
 Burnt			other
 SnowCover		other	# Snow or Ice

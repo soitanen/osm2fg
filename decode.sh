@@ -98,7 +98,7 @@ then
 	#echo $(date) Decoding osm_marsh
 	#$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
 	#echo $(date) Decoding osm_heath
-	#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
+	#$tg/ogr-decode --max-segment 500 --area-type GrassCover $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
 	#echo $(date) Decoding osm_scrub
 	#$tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
 	echo $(date) Decoding osm_urban
@@ -122,7 +122,7 @@ then
 	echo $(date) Decoding osm_industrial
 	$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
 	#echo $(date) Decoding osm_meadow
-	#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+	#$tg/ogr-decode --max-segment 500 --area-type ShrubCover $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	#echo $(date) Decoding osm_farm
 	#$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
 	#echo $(date) Decoding osm_grass
@@ -161,7 +161,7 @@ then
 	#echo $(date) Decoding osm_marsh
 	#$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
 	#echo $(date) Decoding osm_heath
-	#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
+	#$tg/ogr-decode --max-segment 500 --area-type GrassCover $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
 	#echo $(date) Decoding osm_scrub
 	#$tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
 	echo $(date) Decoding osm_urban
@@ -185,7 +185,7 @@ then
 	echo $(date) Decoding osm_industrial
 	$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
 	#echo $(date) Decoding osm_meadow
-	#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+	#$tg/ogr-decode --max-segment 500 --area-type ShrubCover $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
 	#echo $(date) Decoding osm_grass
@@ -224,7 +224,7 @@ then
 	#echo $(date) Decoding osm_marsh
 	#$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
 	echo $(date) Decoding osm_heath
-	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
+	$tg/ogr-decode --max-segment 500 --area-type GrassCover $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
 	echo $(date) Decoding osm_scrub
 	$tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
 	echo $(date) Decoding osm_urban
@@ -248,7 +248,7 @@ then
 	echo $(date) Decoding osm_industrial
 	$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
 	echo $(date) Decoding osm_meadow
-	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+	$tg/ogr-decode --max-segment 500 --area-type ShrubCover $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
 	echo $(date) Decoding osm_grass
@@ -287,7 +287,7 @@ then
 	echo $(date) Decoding osm_marsh
 	$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
 	echo $(date) Decoding osm_heath
-	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
+	$tg/ogr-decode --max-segment 500 --area-type GrassCover $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
 	echo $(date) Decoding osm_scrub
 	$tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
 	echo $(date) Decoding osm_urban
@@ -311,7 +311,7 @@ then
 	echo $(date) Decoding osm_industrial
 	$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
 	echo $(date) Decoding osm_meadow
-	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+	$tg/ogr-decode --max-segment 500 --area-type ShrubCover $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
 	echo $(date) Decoding osm_grass
@@ -326,7 +326,7 @@ then
 	echo $(date) Decoding osm_coastline into grass
 	$tg/ogr-decode --continue-on-errors --area-type $defaultmaterial $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
-	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
+	$tg/ogr-decode --max-segment 400 --area-type Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
 	$tg/ogr-decode --max-segment 500 --area-type Road --line-width 10 $PWD/work/osm_motorway_link $PWD/data/shapefiles/osm_motorway_link
 	echo $(date) Decoding osm_trunk
@@ -350,7 +350,7 @@ then
 	echo $(date) Decoding osm_marsh
 	$tg/ogr-decode --max-segment 500 --area-type Marsh $PWD/work/osm_marsh $PWD/data/shapefiles/osm_marsh
 	echo $(date) Decoding osm_heath
-	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
+	$tg/ogr-decode --max-segment 500 --area-type GrassCover $PWD/work/osm_heath $PWD/data/shapefiles/osm_heath
 	echo $(date) Decoding osm_scrub
 	$tg/ogr-decode --max-segment 500 --area-type Scrub $PWD/work/osm_scrub $PWD/data/shapefiles/osm_scrub
 	echo $(date) Decoding osm_urban
@@ -374,7 +374,7 @@ then
 	echo $(date) Decoding osm_industrial
 	$tg/ogr-decode --max-segment 500 --area-type Industrial $PWD/work/osm_industrial $PWD/data/shapefiles/osm_industrial
 	echo $(date) Decoding osm_meadow
-	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+	$tg/ogr-decode --max-segment 500 --area-type ShrubCover $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
 	echo $(date) Decoding osm_grass
