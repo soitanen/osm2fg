@@ -1708,6 +1708,7 @@ mkdir osm_meadow
 mkdir osm_farm
 mkdir osm_parking
 mkdir osm_sand
+mkdir osm_grass
 
 ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway'" $PWD/osm_motorway/mosm_motorway.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway_link' OR HIGHWAY='primary_link' OR HIGHWAY='secondary_link' OR HIGHWAY='tertiary_link' OR HIGHWAY='trunk_link'" $PWD/osm_motorway_link/mosm_links.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
@@ -1736,6 +1737,7 @@ ogr2ogr -skipfailures -where "RAILWAY='tram'" $PWD/osm_tram/mosm_rail.shp $PWD/O
 ogr2ogr -skipfailures -where "LANDUSE='industrial'" $PWD/osm_industrial/mosm_industrial.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "LANDUSE='meadow'" $PWD/osm_meadow/mosm_meadow.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "LANDUSE='farm' OR LANDUSE='farmland' OR LANDUSE='farmyard'" $PWD/osm_farm/mosm_farm.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "LANDUSE='grass' OR LANDUSE='grassland' OR LANDUSE='greenfield'" $PWD/osm_grass/mosm_grass.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "AMENITY='parking'" $PWD/osm_parking/mosm_parking.shp $PWD/OUT/poi-polygon-cut.shp -lco ENCODING=UTF-8
 
 rm -rf OUT
@@ -1769,6 +1771,7 @@ rm -rf $ptp/data/shapefiles/osm_meadow
 rm -rf $ptp/data/shapefiles/osm_farm
 rm -rf $ptp/data/shapefiles/osm_parking
 rm -rf $ptp/data/shapefiles/osm_sand
+rm -rf $ptp/data/shapefiles/osm_grass
 
 #sh multi.sh
 #python ogr_multipart_to_singlepart.py $PWD/osm_coastline/mland_polygons-cut.shp $PWD/osm_coastline/land_polygons-cut.shp
@@ -1860,3 +1863,4 @@ mv $PWD/osm_meadow $ptp/data/shapefiles/
 mv $PWD/osm_farm $ptp/data/shapefiles/
 mv $PWD/osm_parking $ptp/data/shapefiles/
 mv $PWD/osm_sand $ptp/data/shapefiles/
+mv $PWD/osm_grass $ptp/data/shapefiles/
