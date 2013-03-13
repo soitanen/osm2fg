@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts "n:s:w:e:t:g:i:l:a:h:d:o:" OPTION
+while getopts "n:s:w:e:t:g:i:l:a:h:d:o:m:" OPTION
 do
      case $OPTION in
          n)
@@ -39,6 +39,9 @@ do
          o)
              owndata=$OPTARG
              ;;
+         m)
+             defaultmaterial=$OPTARG
+             ;;
      esac
 done
 
@@ -61,6 +64,6 @@ bash airport_gen.sh -n $n -s $s -w $w -e $e -t $tg
 fi
 
 # generate terrain block in area
-bash block_gen.sh -n $n -s $s -w $w -e $e -t $tg -i $tileid -l $lod -d $decode -o $owndata
+bash block_gen.sh -n $n -s $s -w $w -e $e -t $tg -i $tileid -l $lod -d $decode -o $owndata -m $defaultmaterial
 
 echo "$(date): Finish generating terrain">>terrlog.txt

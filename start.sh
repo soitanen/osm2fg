@@ -21,8 +21,9 @@ airports="y"
 heights="y"
 decode="y"
 owndata="n"
+defaultmaterial="Grassland"
 
-while getopts "n:s:w:e:u:b:t:g:i:l:a:h:d:o:" OPTION
+while getopts "n:s:w:e:u:b:t:g:i:l:a:h:d:o:m:" OPTION
 do
      case $OPTION in
          n)
@@ -67,6 +68,9 @@ do
          o)
              owndata=$OPTARG
              ;;
+         m)
+             defaultmaterial=$OPTARG
+             ;;
      esac
 done
 
@@ -87,7 +91,7 @@ fi
 if [ "$terrain" == "y" ]
 then
 	cd $ptp/osm2fg
-	bash total_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo -i $tileid -l $lod -a $airports -h $heights -d $decode -o $owndata
+	bash total_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo -i $tileid -l $lod -a $airports -h $heights -d $decode -o $owndata -m $defaultmaterial
 fi
 
 cd $ptp

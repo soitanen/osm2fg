@@ -1,4 +1,4 @@
-while getopts "n:s:w:e:t:l:o:" OPTION
+while getopts "n:s:w:e:t:l:o:m:" OPTION
 do
      case $OPTION in
          n)
@@ -21,6 +21,9 @@ do
              ;;
          o)
              owndata=$OPTARG
+             ;;
+         m)
+             defaultmaterial=$OPTARG
              ;;
      esac
 done
@@ -63,12 +66,13 @@ rm -rf $PWD/work/osm_residential
 rm -rf $PWD/work/osm_service
 rm -rf $PWD/work/osm_raceway
 rm -rf $PWD/work/osm_sand
+rm -rf $PWD/work/osm_grass
 
 
 if [ "$lod" -eq 1 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type $defaultmaterial $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	#echo $(date) Decoding osm_links
@@ -121,6 +125,8 @@ then
 	#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	#echo $(date) Decoding osm_farm
 	#$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+	#echo $(date) Decoding osm_grass
+	#$tg/ogr-decode --max-segment 500 --area-type Airport $PWD/work/osm_grass $PWD/data/shapefiles/osm_grass
 	#echo $(date) Decoding osm_parking
 	#$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
 	#echo $(date) Decoding osm_sand
@@ -129,7 +135,7 @@ fi
 if [ "$lod" -eq 2 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type $defaultmaterial $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -182,6 +188,8 @@ then
 	#$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+	#echo $(date) Decoding osm_grass
+	#$tg/ogr-decode --max-segment 500 --area-type Airport $PWD/work/osm_grass $PWD/data/shapefiles/osm_grass
 	#echo $(date) Decoding osm_parking
 	#$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
 	#echo $(date) Decoding osm_sand
@@ -190,7 +198,7 @@ fi
 if [ "$lod" -eq 3 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type $defaultmaterial $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -243,6 +251,8 @@ then
 	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+	echo $(date) Decoding osm_grass
+	$tg/ogr-decode --max-segment 500 --area-type Airport $PWD/work/osm_grass $PWD/data/shapefiles/osm_grass
 	#echo $(date) Decoding osm_parking
 	#$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
 	echo $(date) Decoding osm_sand
@@ -251,7 +261,7 @@ fi
 if [ "$lod" -eq 4 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type $defaultmaterial $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -304,6 +314,8 @@ then
 	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+	echo $(date) Decoding osm_grass
+	$tg/ogr-decode --max-segment 500 --area-type Airport $PWD/work/osm_grass $PWD/data/shapefiles/osm_grass
 	#echo $(date) Decoding osm_parking
 	#$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
 	echo $(date) Decoding osm_sand
@@ -312,7 +324,7 @@ fi
 if [ "$lod" -eq 5 ]
 then
 	echo $(date) Decoding osm_coastline into grass
-	$tg/ogr-decode --continue-on-errors --area-type Grassland $PWD/work/grass $PWD/data/shapefiles/osm_coastline
+	$tg/ogr-decode --continue-on-errors --area-type $defaultmaterial $PWD/work/grass $PWD/data/shapefiles/osm_coastline
 	echo $(date) Decoding osm_motorway
 	$tg/ogr-decode --max-segment 400 --area-type  Road --line-width 18 --texture-lines $PWD/work/osm_motorway $PWD/data/shapefiles/osm_motorway
 	echo $(date) Decoding osm_links
@@ -365,6 +377,8 @@ then
 	$tg/ogr-decode --max-segment 500 --area-type NaturalCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_farm
 	$tg/ogr-decode --max-segment 500 --area-type ComplexCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+	echo $(date) Decoding osm_grass
+	$tg/ogr-decode --max-segment 500 --area-type Airport $PWD/work/osm_grass $PWD/data/shapefiles/osm_grass
 	echo $(date) Decoding osm_parking
 	$tg/ogr-decode --max-segment 500 --area-type Asphalt $PWD/work/osm_parking $PWD/data/shapefiles/osm_parking
 	echo $(date) Decoding osm_sand
