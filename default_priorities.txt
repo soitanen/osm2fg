@@ -4,8 +4,14 @@ Ocean				# collect slivers as ocean
 
 # Area types in order of descending priority
 Hole			hole	# Leave area completely empty
+1x4_road		road
+1x3_road		road
+2x2_road		road
+2x4_road		road
+1x1_road		road
 Freeway			road
 Road			road
+Railroad_tex_1		road
 Railroad		road
 Asphalt			road
 Pond			lake
@@ -33,7 +39,6 @@ FloodLand		other	# Land subject to flooding
 Lagoon			other	# Lagoon
 Bog			other	# Bog
 Marsh			other	# Marshland or swamp
-SaltMarsh		other
 Sand			other	# Sand-covered area
 Saline			other	# Saline
 Littoral		other	# Tidal, Sand-covered area
@@ -68,21 +73,25 @@ ShrubGrassCover		other	# Mixed Shrubland/Grassland
 SavannaCover		other	# Savanna
 Orchard			other	# Orchard
 ShrubCover		other	#
+GreenField		other
+BrownField		other
 DeciduousForest		other	# Deciduous Forest
 EvergreenForest		other	# Evergreen Forest
-Airport			other
-Greenspace		other
 MixedForest		other	# Mixed Forest
 RainForest		other	# Rain Forest
 BarrenCover		other	# Barren or Sparsely Vegetated
 HerbTundra		other	# Herbaceous Tundra
 Sclerophyllous		other
 Heath			other
+Airport			other
+Meadow			other
+Greenspace		other
 ScrubCover		other
 GrassCover		other	# Grassland
 Grassland		other
 Burnt			other
 SnowCover		other	# Snow or Ice
+SaltMarsh		other
 
 Island			island	# any island area not covered otherwise
 Default			landmass # any land area not covered otherwise

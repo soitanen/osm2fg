@@ -18,8 +18,8 @@ do
      esac
 done
 
-hstep=1000
-vstep=125
+hstep=50 #1000
+vstep=25 #125
 
 i=$s
 while [ $i -lt $n ]
@@ -49,7 +49,8 @@ do
 					je=$(($j+1))
 					xe=0
 				fi
-#echo ogr2ogr -skipfailures -clipsrc $j.$xw $i.$ys $je.$xe $in.$yn $PWD/osm_coastline/land_polygons-cut_"$j"_"$xw"_"$i"_"$ys".shp $PWD/osm_coastline/land_polygons.shp
+#-clipsrc $j.$xw $i.$ys $je.$xe $in.$yn  land_polygons-cut_"$j"_"$xw"_"$i"_"$ys".shp
+# one slice mode: $w $i.$ys $e $in.$yn   land_polygons-cut_"$w"_"$xw"_"$i"_"$ys"
 		ogr2ogr -skipfailures -clipsrc $j.$xw $i.$ys $je.$xe $in.$yn $PWD/osm_coastline/land_polygons-cut_"$j"_"$xw"_"$i"_"$ys".shp $PWD/osm_coastline/land_polygons-cut.shp
 				x=$(($x+$hstep))
 			done

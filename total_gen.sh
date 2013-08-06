@@ -56,11 +56,11 @@ echo "$(date): Starting generating heights sh height_gen.sh -n $n -s $s -w $w -e
 bash height_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo
 fi
 
-if [ "$airports" == "y" ]
+if [ "$airports" != "n" ]
 then
 # generation of airports in area + selected airports in folder
 echo "$(date): Starting generating airports sh airport_gen.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt
-bash airport_gen.sh -n $n -s $s -w $w -e $e -t $tg
+bash airport_gen.sh -n $n -s $s -w $w -e $e -t $tg -a $airports
 fi
 
 # generate terrain block in area

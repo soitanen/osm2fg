@@ -35,7 +35,7 @@ then
 		then
 			if [ "$e" -gt 26 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-LEN.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-LEN.7z
 				7zr x -o* RU-LEN.7z
 				sh merge.sh -o OUT -i RU-LEN
 				rm -rf RU-LEN
@@ -52,7 +52,7 @@ then
 		then
 			if [ "$e" -gt 29 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KR.7z
 				7zr x -o* RU-KR.7z
 				sh merge.sh -o OUT -i RU-KR
 				rm -rf RU-KR
@@ -69,7 +69,7 @@ then
 		then
 			if [ "$e" -gt 29 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SPE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SPE.7z  #http://be.gis-lab.info/data/osmshp/latest/RU-SPE.7z
 				7zr x -o* RU-SPE.7z
 				sh merge.sh -o OUT -i RU-SPE
 				rm -rf RU-SPE
@@ -86,7 +86,7 @@ then
 		then
 			if [ "$e" -gt 29 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-NGR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-NGR.7z
 				7zr x -o* RU-NGR.7z
 				sh merge.sh -o OUT -i RU-NGR
 				rm -rf RU-NGR
@@ -103,7 +103,7 @@ then
 		then
 			if [ $e -gt 27 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-PSK.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-PSK.7z
 				7zr x -o* RU-PSK.7z
 				sh merge.sh -o OUT -i RU-PSK
 				rm -rf RU-PSK
@@ -120,7 +120,7 @@ then
 		then
 			if [ "$e" -gt 34 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-VLG.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-VLG.7z
 				7zr x -o* RU-VLG.7z
 				sh merge.sh -o OUT -i RU-VLG
 				rm -rf RU-VLG
@@ -137,7 +137,7 @@ then
 		then
 			if [ "$e" -gt 36 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KDA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KDA.7z
 				7zr x -o* RU-KDA.7z
 				sh merge.sh -o OUT -i RU-KDA
 				rm -rf RU-KDA
@@ -154,7 +154,7 @@ then
 		then
 			if [ "$e" -gt 38 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-AD.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-AD.7z
 				7zr x -o* RU-AD.7z
 				sh merge.sh -o OUT -i RU-AD
 				rm -rf RU-AD
@@ -171,7 +171,7 @@ then
 		then
 			if [ "$e" -gt 83 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-AL.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-AL.7z
 				7zr x -o* RU-AL.7z
 				sh merge.sh -o OUT -i RU-AL
 				rm -rf RU-AL
@@ -188,7 +188,7 @@ then
 		then
 			if [ "$e" -gt 77 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ALT.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ALT.7z
 				7zr x -o* RU-ALT.7z
 				sh merge.sh -o OUT -i RU-ALT
 				rm -rf RU-ALT
@@ -205,7 +205,7 @@ then
 		then
 			if [ "$e" -gt 119 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-AMU.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-AMU.7z
 				7zr x -o* RU-AMU.7z
 				sh merge.sh -o OUT -i RU-AMU
 				rm -rf RU-AMU
@@ -222,7 +222,7 @@ then
 		then
 			if [ "$e" -gt 35 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ARK.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ARK.7z
 				7zr x -o* RU-ARK.7z
 				sh merge.sh -o OUT -i RU-ARK
 				rm -rf RU-ARK
@@ -239,7 +239,7 @@ then
 		then
 			if [ "$e" -gt 44 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-AST.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-AST.7z
 				7zr x -o* RU-AST.7z
 				sh merge.sh -o OUT -i RU-AST
 				rm -rf RU-AST
@@ -256,7 +256,7 @@ then
 		then
 			if [ "$e" -gt 53 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-BA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-BA.7z
 				7zr x -o* RU-BA.7z
 				sh merge.sh -o OUT -i RU-BA
 				rm -rf RU-BA
@@ -273,7 +273,7 @@ then
 		then
 			if [ "$e" -gt 35 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-BEL.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-BEL.7z
 				7zr x -o* RU-BEL.7z
 				sh merge.sh -o OUT -i RU-BEL
 				rm -rf RU-BEL
@@ -290,7 +290,7 @@ then
 		then
 			if [ "$e" -gt 31 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-BRY.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-BRY.7z
 				7zr x -o* RU-BRY.7z
 				sh merge.sh -o OUT -i RU-BRY
 				rm -rf RU-BRY
@@ -307,7 +307,7 @@ then
 		then
 			if [ "$e" -gt 98 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-BU.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-BU.7z
 				7zr x -o* RU-BU.7z
 				sh merge.sh -o OUT -i RU-BU
 				rm -rf RU-BU
@@ -324,7 +324,7 @@ then
 		then
 			if [ "$e" -gt 44 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-CE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-CE.7z
 				7zr x -o* RU-CE.7z
 				sh merge.sh -o OUT -i RU-CE
 				rm -rf RU-CE
@@ -341,7 +341,7 @@ then
 		then
 			if [ "$e" -gt 57 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-CHE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-CHE.7z
 				7zr x -o* RU-CHE.7z
 				sh merge.sh -o OUT -i RU-CHE
 				rm -rf RU-CHE
@@ -358,7 +358,7 @@ then
 		then
 			if [ "$e" -gt 158 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-CHU.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-CHU.7z
 				7zr x -o* RU-CHU.7z
 				sh merge.sh -o OUT -i RU-CHU
 				rm -rf RU-CHU
@@ -375,7 +375,7 @@ then
 		then
 			if [ "$e" -gt 45 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-CU.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-CU.7z
 				7zr x -o* RU-CU.7z
 				sh merge.sh -o OUT -i RU-CU
 				rm -rf RU-CU
@@ -392,7 +392,7 @@ then
 		then
 			if [ "$e" -gt 45 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-DA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-DA.7z
 				7zr x -o* RU-DA.7z
 				sh merge.sh -o OUT -i RU-DA
 				rm -rf RU-DA
@@ -409,7 +409,7 @@ then
 		then
 			if [ "$e" -gt 44 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-IN.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-IN.7z
 				7zr x -o* RU-IN.7z
 				sh merge.sh -o OUT -i RU-IN
 				rm -rf RU-IN
@@ -426,7 +426,7 @@ then
 		then
 			if [ "$e" -gt 95 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-IRK.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-IRK.7z
 				7zr x -o* RU-IRK.7z
 				sh merge.sh -o OUT -i RU-IRK
 				rm -rf RU-IRK
@@ -443,7 +443,7 @@ then
 		then
 			if [ "$e" -gt 39 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-IVA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-IVA.7z
 				7zr x -o* RU-IVA.7z
 				sh merge.sh -o OUT -i RU-IVA
 				rm -rf RU-IVA
@@ -460,7 +460,7 @@ then
 		then
 			if [ "$e" -gt 155 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KAM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KAM.7z
 				7zr x -o* RU-KAM.7z
 				sh merge.sh -o OUT -i RU-KAM
 				rm -rf RU-KAM
@@ -477,7 +477,7 @@ then
 		then
 			if [ "$e" -gt 42 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KB.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KB.7z
 				7zr x -o* RU-KB.7z
 				sh merge.sh -o OUT -i RU-KB
 				rm -rf RU-KB
@@ -494,7 +494,7 @@ then
 		then
 			if [ "$e" -gt 40 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KC.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KC.7z
 				7zr x -o* RU-KC.7z
 				sh merge.sh -o OUT -i RU-KC
 				rm -rf RU-KC
@@ -511,7 +511,7 @@ then
 		then
 			if [ "$e" -gt 84 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KEM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KEM.7z
 				7zr x -o* RU-KEM.7z
 				sh merge.sh -o OUT -i RU-KEM
 				rm -rf RU-KEM
@@ -528,7 +528,7 @@ then
 		then
 			if [ "$e" -gt 19 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KGD.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KGD.7z
 				7zr x -o* RU-KGD.7z
 				sh merge.sh -o OUT -i RU-KGD
 				rm -rf RU-KGD
@@ -545,7 +545,7 @@ then
 		then
 			if [ "$e" -gt 61 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KGN.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KGN.7z
 				7zr x -o* RU-KGN.7z
 				sh merge.sh -o OUT -i RU-KGN
 				rm -rf RU-KGN
@@ -562,7 +562,7 @@ then
 		then
 			if [ "$e" -gt 130 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KHA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KHA.7z
 				7zr x -o* RU-KHA.7z
 				sh merge.sh -o OUT -i RU-KHA
 				rm -rf RU-KHA
@@ -579,7 +579,7 @@ then
 		then
 			if [ "$e" -gt 59 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KHM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KHM.7z
 				7zr x -o* RU-KHM.7z
 				sh merge.sh -o OUT -i RU-KHM
 				rm -rf RU-KHM
@@ -596,7 +596,7 @@ then
 		then
 			if [ "$e" -gt 46 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KIR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KIR.7z
 				7zr x -o* RU-KIR.7z
 				sh merge.sh -o OUT -i RU-KIR
 				rm -rf RU-KIR
@@ -613,7 +613,7 @@ then
 		then
 			if [ "$e" -gt 87 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KK.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KK.7z
 				7zr x -o* RU-KK.7z
 				sh merge.sh -o OUT -i RU-KK
 				rm -rf RU-KK
@@ -630,7 +630,7 @@ then
 		then
 			if [ "$e" -gt 41 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KL.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KL.7z
 				7zr x -o* RU-KL.7z
 				sh merge.sh -o OUT -i RU-KL
 				rm -rf RU-KL
@@ -647,7 +647,7 @@ then
 		then
 			if [ "$e" -gt 33 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KLU.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KLU.7z
 				7zr x -o* RU-KLU.7z
 				sh merge.sh -o OUT -i RU-KLU
 				rm -rf RU-KLU
@@ -664,7 +664,7 @@ then
 		then
 			if [ "$e" -gt 45 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KO.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KO.7z
 				7zr x -o* RU-KO.7z
 				sh merge.sh -o OUT -i RU-KO
 				rm -rf RU-KO
@@ -681,7 +681,7 @@ then
 		then
 			if [ "$e" -gt 40 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KOS.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KOS.7z
 				7zr x -o* RU-KOS.7z
 				sh merge.sh -o OUT -i RU-KOS
 				rm -rf RU-KOS
@@ -698,7 +698,7 @@ then
 		then
 			if [ "$e" -gt 34 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KRS.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KRS.7z
 				7zr x -o* RU-KRS.7z
 				sh merge.sh -o OUT -i RU-KRS
 				rm -rf RU-KRS
@@ -715,7 +715,7 @@ then
 		then
 			if [ "$e" -gt 75 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-KYA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-KYA.7z
 				7zr x -o* RU-KYA.7z
 				sh merge.sh -o OUT -i RU-KYA
 				rm -rf RU-KYA
@@ -732,7 +732,7 @@ then
 		then
 			if [ "$e" -gt 37 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-LIP.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-LIP.7z
 				7zr x -o* RU-LIP.7z
 				sh merge.sh -o OUT -i RU-LIP
 				rm -rf RU-LIP
@@ -749,7 +749,7 @@ then
 		then
 			if [ "$e" -gt 144 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-MAG.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-MAG.7z
 				7zr x -o* RU-MAG.7z
 				sh merge.sh -o OUT -i RU-MAG
 				rm -rf RU-MAG
@@ -766,7 +766,7 @@ then
 		then
 			if [ "$e" -gt 45 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ME.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ME.7z
 				7zr x -o* RU-ME.7z
 				sh merge.sh -o OUT -i RU-ME
 				rm -rf RU-ME
@@ -783,7 +783,7 @@ then
 		then
 			if [ "$e" -gt 42 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-MO.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-MO.7z
 				7zr x -o* RU-MO.7z
 				sh merge.sh -o OUT -i RU-MO
 				rm -rf RU-MO
@@ -800,7 +800,7 @@ then
 		then
 			if [ "$e" -gt 35 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-MOS.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-MOS.7z
 				7zr x -o* RU-MOS.7z
 				sh merge.sh -o OUT -i RU-MOS
 				rm -rf RU-MOS
@@ -817,7 +817,7 @@ then
 		then
 			if [ "$e" -gt 37 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-MOW.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-MOW.7z
 				7zr x -o* RU-MOW.7z
 				sh merge.sh -o OUT -i RU-MOW
 				rm -rf RU-MOW
@@ -834,7 +834,7 @@ then
 		then
 			if [ "$e" -gt 28 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-MUR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-MUR.7z
 				7zr x -o* RU-MUR.7z
 				sh merge.sh -o OUT -i RU-MUR
 				rm -rf RU-MUR
@@ -851,7 +851,7 @@ then
 		then
 			if [ "$e" -gt 41 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-NEN.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-NEN.7z
 				7zr x -o* RU-NEN.7z
 				sh merge.sh -o OUT -i RU-NEN
 				rm -rf RU-NEN
@@ -868,7 +868,7 @@ then
 		then
 			if [ "$e" -gt 41 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-NIZ.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-NIZ.7z
 				7zr x -o* RU-NIZ.7z
 				sh merge.sh -o OUT -i RU-NIZ
 				rm -rf RU-NIZ
@@ -885,7 +885,7 @@ then
 		then
 			if [ "$e" -gt 75 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-NVS.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-NVS.7z
 				7zr x -o* RU-NVS.7z
 				sh merge.sh -o OUT -i RU-NVS
 				rm -rf RU-NVS
@@ -902,7 +902,7 @@ then
 		then
 			if [ "$e" -gt 70 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-OMS.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-OMS.7z
 				7zr x -o* RU-OMS.7z
 				sh merge.sh -o OUT -i RU-OMS
 				rm -rf RU-OMS
@@ -919,7 +919,7 @@ then
 		then
 			if [ "$e" -gt 50 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ORE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ORE.7z
 				7zr x -o* RU-ORE.7z
 				sh merge.sh -o OUT -i RU-ORE
 				rm -rf RU-ORE
@@ -936,7 +936,7 @@ then
 		then
 			if [ "$e" -gt 34 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ORL.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ORL.7z
 				7zr x -o* RU-ORL.7z
 				sh merge.sh -o OUT -i RU-ORL
 				rm -rf RU-ORL
@@ -953,7 +953,7 @@ then
 		then
 			if [ "$e" -gt 51 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-PER.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-PER.7z
 				7zr x -o* RU-PER.7z
 				sh merge.sh -o OUT -i RU-PER
 				rm -rf RU-PER
@@ -970,7 +970,7 @@ then
 		then
 			if [ "$e" -gt 42 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-PNZ.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-PNZ.7z
 				7zr x -o* RU-PNZ.7z
 				sh merge.sh -o OUT -i RU-PNZ
 				rm -rf RU-PNZ
@@ -987,7 +987,7 @@ then
 		then
 			if [ "$e" -gt 130 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-PRI.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-PRI.7z
 				7zr x -o* RU-PRI.7z
 				sh merge.sh -o OUT -i RU-PRI
 				rm -rf RU-PRI
@@ -1004,7 +1004,7 @@ then
 		then
 			if [ "$e" -gt 38 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ROS.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ROS.7z
 				7zr x -o* RU-ROS.7z
 				sh merge.sh -o OUT -i RU-ROS
 				rm -rf RU-ROS
@@ -1021,7 +1021,7 @@ then
 		then
 			if [ "$e" -gt 38 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-RYA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-RYA.7z
 				7zr x -o* RU-RYA.7z
 				sh merge.sh -o OUT -i RU-RYA
 				rm -rf RU-RYA
@@ -1038,7 +1038,7 @@ then
 		then
 			if [ "$e" -gt 105 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SA.7z
 				7zr x -o* RU-SA.7z
 				sh merge.sh -o OUT -i RU-SA
 				rm -rf RU-SA
@@ -1055,7 +1055,7 @@ then
 		then
 			if [ "$e" -gt 141 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SAK.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SAK.7z
 				7zr x -o* RU-SAK.7z
 				sh merge.sh -o OUT -i RU-SAK
 				rm -rf RU-SAK
@@ -1072,7 +1072,7 @@ then
 		then
 			if [ "$e" -gt 47 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SAM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SAM.7z
 				7zr x -o* RU-SAM.7z
 				sh merge.sh -o OUT -i RU-SAM
 				rm -rf RU-SAM
@@ -1089,7 +1089,7 @@ then
 		then
 			if [ "$e" -gt 42 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SAR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SAR.7z
 				7zr x -o* RU-SAR.7z
 				sh merge.sh -o OUT -i RU-SAR
 				rm -rf RU-SAR
@@ -1106,7 +1106,7 @@ then
 		then
 			if [ "$e" -gt 43 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SE.7z
 				7zr x -o* RU-SE.7z
 				sh merge.sh -o OUT -i RU-SE
 				rm -rf RU-SE
@@ -1123,7 +1123,7 @@ then
 		then
 			if [ "$e" -gt 30 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SMO.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SMO.7z
 				7zr x -o* RU-SMO.7z
 				sh merge.sh -o OUT -i RU-SMO
 				rm -rf RU-SMO
@@ -1140,7 +1140,7 @@ then
 		then
 			if [ "$e" -gt 40 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-STA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-STA.7z
 				7zr x -o* RU-STA.7z
 				sh merge.sh -o OUT -i RU-STA
 				rm -rf RU-STA
@@ -1157,7 +1157,7 @@ then
 		then
 			if [ "$e" -gt 57 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-SVE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-SVE.7z
 				7zr x -o* RU-SVE.7z
 				sh merge.sh -o OUT -i RU-SVE
 				rm -rf RU-SVE
@@ -1174,7 +1174,7 @@ then
 		then
 			if [ "$e" -gt 47 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TA.7z
 				7zr x -o* RU-TA.7z
 				sh merge.sh -o OUT -i RU-TA
 				rm -rf RU-TA
@@ -1191,7 +1191,7 @@ then
 		then
 			if [ "$e" -gt 39 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TAM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TAM.7z
 				7zr x -o* RU-TAM.7z
 				sh merge.sh -o OUT -i RU-TAM
 				rm -rf RU-TAM
@@ -1208,7 +1208,7 @@ then
 		then
 			if [ "$e" -gt 75 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TOM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TOM.7z
 				7zr x -o* RU-TOM.7z
 				sh merge.sh -o OUT -i RU-TOM
 				rm -rf RU-TOM
@@ -1225,7 +1225,7 @@ then
 		then
 			if [ "$e" -gt 35 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TUL.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TUL.7z
 				7zr x -o* RU-TUL.7z
 				sh merge.sh -o OUT -i RU-TUL
 				rm -rf RU-TUL
@@ -1242,7 +1242,7 @@ then
 		then
 			if [ "$e" -gt 30 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TVE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TVE.7z
 				7zr x -o* RU-TVE.7z
 				sh merge.sh -o OUT -i RU-TVE
 				rm -rf RU-TVE
@@ -1259,7 +1259,7 @@ then
 		then
 			if [ "$e" -gt 88 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TY.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TY.7z
 				7zr x -o* RU-TY.7z
 				sh merge.sh -o OUT -i RU-TY
 				rm -rf RU-TY
@@ -1276,7 +1276,7 @@ then
 		then
 			if [ "$e" -gt 64 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-TYU.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-TYU.7z
 				7zr x -o* RU-TYU.7z
 				sh merge.sh -o OUT -i RU-TYU
 				rm -rf RU-TYU
@@ -1293,7 +1293,7 @@ then
 		then
 			if [ "$e" -gt 51 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-UD.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-UD.7z
 				7zr x -o* RU-UD.7z
 				sh merge.sh -o OUT -i RU-UD
 				rm -rf RU-UD
@@ -1310,7 +1310,7 @@ then
 		then
 			if [ "$e" -gt 45 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ULY.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ULY.7z
 				7zr x -o* RU-ULY.7z
 				sh merge.sh -o OUT -i RU-ULY
 				rm -rf RU-ULY
@@ -1327,7 +1327,7 @@ then
 		then
 			if [ "$e" -gt 41 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-VGG.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-VGG.7z
 				7zr x -o* RU-VGG.7z
 				sh merge.sh -o OUT -i RU-VGG
 				rm -rf RU-VGG
@@ -1344,7 +1344,7 @@ then
 		then
 			if [ "$e" -gt 38 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-VLA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-VLA.7z
 				7zr x -o* RU-VLA.7z
 				sh merge.sh -o OUT -i RU-VLA
 				rm -rf RU-VLA
@@ -1361,7 +1361,7 @@ then
 		then
 			if [ "$e" -gt 38 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-VOR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-VOR.7z
 				7zr x -o* RU-VOR.7z
 				sh merge.sh -o OUT -i RU-VOR
 				rm -rf RU-VOR
@@ -1378,7 +1378,7 @@ then
 		then
 			if [ "$e" -gt 62 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-YAN.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-YAN.7z
 				7zr x -o* RU-YAN.7z
 				sh merge.sh -o OUT -i RU-YAN
 				rm -rf RU-YAN
@@ -1395,7 +1395,7 @@ then
 		then
 			if [ "$e" -gt 37 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-YAR.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-YAR.7z
 				7zr x -o* RU-YAR.7z
 				sh merge.sh -o OUT -i RU-YAR
 				rm -rf RU-YAR
@@ -1412,7 +1412,7 @@ then
 		then
 			if [ "$e" -gt 130 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-YEV.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-YEV.7z
 				7zr x -o* RU-YEV.7z
 				sh merge.sh -o OUT -i RU-YEV
 				rm -rf RU-YEV
@@ -1429,7 +1429,7 @@ then
 		then
 			if [ "$e" -gt 107 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/RU-ZAB.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/RU-ZAB.7z
 				7zr x -o* RU-ZAB.7z
 				sh merge.sh -o OUT -i RU-ZAB
 				rm -rf RU-ZAB
@@ -1446,7 +1446,7 @@ then
 		then
 			if [ "$e" -gt 43 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/AM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/AM.7z
 				7zr x -o* AM.7z
 				sh merge.sh -o OUT -i AM
 				rm -rf AM
@@ -1463,7 +1463,7 @@ then
 		then
 			if [ "$e" -gt 44 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/AZ.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/AZ.7z
 				7zr x -o* AZ.7z
 				sh merge.sh -o OUT -i AZ
 				rm -rf AZ
@@ -1480,7 +1480,7 @@ then
 		then
 			if [ "$e" -gt 23 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/BY.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/BY.7z
 				7zr x -o* BY.7z
 				sh merge.sh -o OUT -i BY
 				rm -rf BY
@@ -1497,7 +1497,7 @@ then
 		then
 			if [ "$e" -gt 21 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/EE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/EE.7z
 				7zr x -o* EE.7z
 				sh merge.sh -o OUT -i EE
 				rm -rf EE
@@ -1514,7 +1514,7 @@ then
 		then
 			if [ "$e" -gt 39 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/GE.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/GE.7z
 				7zr x -o* GE.7z
 				sh merge.sh -o OUT -i GE
 				rm -rf GE
@@ -1531,7 +1531,7 @@ then
 		then
 			if [ "$e" -gt 69 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/KG.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/KG.7z
 				7zr x -o* KG.7z
 				sh merge.sh -o OUT -i KG
 				rm -rf KG
@@ -1548,7 +1548,7 @@ then
 		then
 			if [ "$e" -gt 46 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/KZ.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/KZ.7z
 				7zr x -o* KZ.7z
 				sh merge.sh -o OUT -i KZ
 				rm -rf KZ
@@ -1565,7 +1565,7 @@ then
 		then
 			if [ "$e" -gt 20 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/LT.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/LT.7z
 				7zr x -o* LT.7z
 				sh merge.sh -o OUT -i LT
 				rm -rf LT
@@ -1582,7 +1582,7 @@ then
 		then
 			if [ "$e" -gt 20 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/LV.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/LV.7z
 				7zr x -o* LV.7z
 				sh merge.sh -o OUT -i LV
 				rm -rf LV
@@ -1599,7 +1599,7 @@ then
 		then
 			if [ "$e" -gt 26 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/MD.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/MD.7z
 				7zr x -o* MD.7z
 				sh merge.sh -o OUT -i MD
 				rm -rf MD
@@ -1616,7 +1616,7 @@ then
 		then
 			if [ "$e" -gt 67 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/TJ.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/TJ.7z
 				7zr x -o* TJ.7z
 				sh merge.sh -o OUT -i TJ
 				rm -rf TJ
@@ -1633,7 +1633,7 @@ then
 		then
 			if [ "$e" -gt 52 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/TM.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/TM.7z
 				7zr x -o* TM.7z
 				sh merge.sh -o OUT -i TM
 				rm -rf TM
@@ -1650,7 +1650,7 @@ then
 		then
 			if [ "$e" -gt 22 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/UA.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/UA.7z
 				7zr x -o* UA.7z
 				sh merge.sh -o OUT -i UA
 				rm -rf UA
@@ -1667,7 +1667,7 @@ then
 		then
 			if [ "$e" -gt 55 ];
 			then
-				wget -N http://data.gis-lab.info/osm_shp/latest/UZ.7z
+				wget -N http://be.gis-lab.info/data/osmshp/latest/UZ.7z
 				7zr x -o* UZ.7z
 				sh merge.sh -o OUT -i UZ
 				rm -rf UZ
@@ -1677,7 +1677,7 @@ then
 fi
 
 sh cut.sh -n $n -s $s -w $w -e $e -d OUT 
-bash landcut.sh -n $n -s $s -w $w -e $e
+#bash landcut.sh -n $n -s $s -w $w -e $e
 rm -rf land-polygons-split-4326
 
 mkdir osm_motorway
@@ -1710,7 +1710,9 @@ mkdir osm_parking
 mkdir osm_sand
 mkdir osm_grass
 
-ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway'" $PWD/osm_motorway/mosm_motorway.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+# -nlt "LINESTRING" -lco ENCODING=UTF-8
+
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway'" $PWD/osm_motorway/mosm_motorway.shp $PWD/OUT/highway-line-cut.shp
 ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='motorway_link' OR HIGHWAY='primary_link' OR HIGHWAY='secondary_link' OR HIGHWAY='tertiary_link' OR HIGHWAY='trunk_link'" $PWD/osm_motorway_link/mosm_links.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='trunk'" $PWD/osm_trunk/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "TUNNEL!='yes' AND HIGHWAY='primary'" $PWD/osm_primary/mosm_road.shp $PWD/OUT/highway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
@@ -1730,15 +1732,19 @@ ogr2ogr -skipfailures -where "NATURAL='beach' or NATURAL='sand'" $PWD/osm_sand/m
 ogr2ogr -skipfailures -where "WATERWAY='river'" $PWD/osm_water_river/mosm_river.shp $PWD/OUT/water-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "WATERWAY='canal'" $PWD/osm_water_canal/mosm_canal.shp $PWD/OUT/water-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "WATERWAY='stream'" $PWD/osm_water_stream/mosm_stream.shp $PWD/OUT/water-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
-ogr2ogr -skipfailures -where "RAILWAY='rail'" $PWD/osm_railway/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
-ogr2ogr -skipfailures -where "RAILWAY='siding'" $PWD/osm_railway_siding/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
-ogr2ogr -skipfailures -where "RAILWAY='spur'" $PWD/osm_railway_spur/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
-ogr2ogr -skipfailures -where "RAILWAY='tram'" $PWD/osm_tram/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND RAILWAY='rail'" $PWD/osm_railway/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND RAILWAY='siding'" $PWD/osm_railway_siding/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND RAILWAY='spur'" $PWD/osm_railway_spur/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
+ogr2ogr -skipfailures -where "TUNNEL!='yes' AND RAILWAY='tram'" $PWD/osm_tram/mosm_rail.shp $PWD/OUT/railway-line-cut.shp -nlt "LINESTRING" -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "LANDUSE='industrial'" $PWD/osm_industrial/mosm_industrial.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "LANDUSE='meadow'" $PWD/osm_meadow/mosm_meadow.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "LANDUSE='farm' OR LANDUSE='farmland' OR LANDUSE='farmyard'" $PWD/osm_farm/mosm_farm.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "LANDUSE='grass' OR LANDUSE='grassland' OR LANDUSE='greenfield'" $PWD/osm_grass/mosm_grass.shp $PWD/OUT/landuse-polygon-cut.shp -lco ENCODING=UTF-8
 ogr2ogr -skipfailures -where "AMENITY='parking'" $PWD/osm_parking/mosm_parking.shp $PWD/OUT/poi-polygon-cut.shp -lco ENCODING=UTF-8
+
+ogr2ogr -a_srs "EPSG:4326" $PWD/osm_coastline/land_polygons-cut_WGS84.shp  $PWD/osm_coastline/land_polygons-cut.shp
+
+rm -rf $PWD/osm_coastline/land_polygons-cut.*
 
 rm -rf OUT
 

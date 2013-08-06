@@ -1,0 +1,6 @@
+Tue Aug  6 11:09:11 MSK 2013: Starting generating terrain
+Tue Aug  6 11:09:11 MSK 2013: LOD level is set to: 5
+Tue Aug  6 11:09:11 MSK 2013: Starting generating heights sh height_gen.sh -n 60 -s 59 -w 29 -e 30 -t /usr/bin -g n
+Tue Aug  6 11:09:15 MSK 2013: Starting generating airports sh airport_gen.sh -n 60 -s 59 -w 29 -e 30 -t /usr/bin
+60 59 29 30
+Tue Aug  6 11:09:26 MSK 2013: sh decode.sh -n 60 -s 59 -w 29 -e 30 -t /usr/bin
