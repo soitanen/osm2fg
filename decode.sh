@@ -67,6 +67,7 @@ rm -rf $PWD/work/osm_service
 rm -rf $PWD/work/osm_raceway
 rm -rf $PWD/work/osm_sand
 rm -rf $PWD/work/osm_grass
+rm -rf $PWD/work/osm_unpaved_roads
 
 bash ogr_decode.sh -l $lod -t $tg -m $defaultmaterial
 

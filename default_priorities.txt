@@ -9,6 +9,7 @@ Hole			hole	# Leave area completely empty
 2x2_road		road
 2x4_road		road
 1x1_road		road
+dirt_road		road
 Freeway			road
 Road			road
 Railroad_tex_1		road
