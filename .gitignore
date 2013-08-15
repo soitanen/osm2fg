@@ -1,0 +1,9 @@
+data/airports_base/AptNav*.zip
+data/airports_base/apt.dat
+data/shapefiles/*
+gis/*.7z
+gis/*.zip
+work/*
+output/Terrain/
+terrlog.txt
+
