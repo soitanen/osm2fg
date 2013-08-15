@@ -44,9 +44,18 @@ fi
 if [ $airports -eq 2 -o $airports -eq 3 -o $airports -eq 6 -o $airports -eq 7 ]
 then
 #reading airports from svn repository
-svn co http://svn.dev.flightgear.ru/osm-terrain $PWD/data/airports_svn
+#svn co http://svn.dev.flightgear.ru/osm-terrain $PWD/data/airports_svn
+if [ -d "$PWD/data/rus_aptdat" ]
+then
+	cd $PWD/data/rus_aptdat
+	git pull
+	cd ../..
+else
+	git clone https://github.com/soitanen/rus_aptdat.git $PWD/data/rus_aptdat
+fi
+
 #parsing airports, that placed in airports_svn folder
-for i in $PWD/data/airports_svn/*.dat
+for i in $PWD/data/rus_aptdat/*.dat
 do
 	$tg/genapts850 --threads --max-slope=0.02 --input=$i --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
 done
