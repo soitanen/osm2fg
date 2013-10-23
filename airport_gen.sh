@@ -26,8 +26,8 @@ do
 done
 
 #downloading apt.dat
-wget -N http://dev.x-plane.com/update/data/AptNav201304XP900.zip --directory-prefix=$PWD/data/airports_base/
-unzip -uo $PWD/data/airports_base/AptNav201304XP900.zip apt.dat -d $PWD/data/airports_base/
+wget -N http://dev.x-plane.com/update/data/AptNav201310XP900.zip --directory-prefix=$PWD/data/airports_base/
+unzip -uo $PWD/data/airports_base/AptNav201310XP900.zip apt.dat -d $PWD/data/airports_base/
 
 #deleting old data from Work directory
 rm -rf $PWD/work/AirportArea
