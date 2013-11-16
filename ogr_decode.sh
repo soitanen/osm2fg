@@ -72,7 +72,11 @@ then
 ###############################################################
 
 	echo $(date) Decoding osm_forest
-	$tg/ogr-decode --max-segment 500 --area-type EvergreenForest $PWD/work/osm_forest $PWD/data/shapefiles/osm_forest
+	$tg/ogr-decode --max-segment 500 --area-type EvergreenForest $PWD/work/osm_forest_c $PWD/data/shapefiles/osm_forest_c
+	echo $(date) Decoding osm_forest
+	$tg/ogr-decode --max-segment 500 --area-type DeciduousForest $PWD/work/osm_forest_d $PWD/data/shapefiles/osm_forest_d
+	echo $(date) Decoding osm_forest
+	$tg/ogr-decode --max-segment 500 --area-type MixedForest $PWD/work/osm_forest_m $PWD/data/shapefiles/osm_forest_m
 	echo $(date) Decoding osm_urban
 	$tg/ogr-decode --max-segment 500 --area-type Town $PWD/work/osm_urban $PWD/data/shapefiles/osm_urban
 

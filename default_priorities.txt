@@ -55,7 +55,6 @@ OpenMining		other	# OpenMining
 BuiltUpCover		other	# Urban and Built-Up Land
 Transport		other	# Transport
 Cemetery		other	# Cemetery
-DryCrop			other	# Dryland Cropland and Pasture
 IrrCrop			other	# Irrigated Cropland and Pasture
 Rice			other
 MixedCrop		other	# Mixed Dryland/Irrigated Cropland and Pasture
@@ -90,6 +89,7 @@ Greenspace		other
 ScrubCover		other
 GrassCover		other	# Grassland
 Grassland		other
+DryCrop			other	# Dryland Cropland and Pasture
 Burnt			other
 SnowCover		other	# Snow or Ice
 SaltMarsh		other

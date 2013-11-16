@@ -1695,7 +1695,9 @@ mkdir osm_marsh
 mkdir osm_heath
 mkdir osm_scrub
 mkdir osm_urban
-mkdir osm_forest
+mkdir osm_forest_c
+mkdir osm_forest_d
+mkdir osm_forest_m
 mkdir osm_water_river
 mkdir osm_water_canal
 mkdir osm_water_stream
@@ -1763,7 +1765,10 @@ ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='heath'" $PWD/osm_heath/m
 ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='scrub'" $PWD/osm_scrub/mosm_scrub.shp $PWD/OUT/vegetation-polygon-cut.shp
 ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE='allotments' OR LANDUSE='residential'" $PWD/osm_urban/mosm_urban.shp $PWD/OUT/landuse-polygon-cut.shp
 #ogr2ogr -skipfailures $PWD/osm_forest/mosm_forest.shp $PWD/OUT/vegetation-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%wood%' OR LANDUSE LIKE '%forest%'" $PWD/osm_forest/mosm_forest.shp $PWD/OUT/vegetation-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%wood%' OR LANDUSE LIKE '%forest%'" $PWD/OUT/forest-cut.shp $PWD/OUT/vegetation-polygon-cut.shp
+ogr2ogr -skipfailures -where "WOOD LIKE '%coniferous%'" $PWD/osm_forest_c/mosm_forest.shp $PWD/OUT/forest-cut.shp
+ogr2ogr -skipfailures -where "WOOD LIKE '%deciduous%'" $PWD/osm_forest_d/mosm_forest.shp $PWD/OUT/forest-cut.shp
+ogr2ogr -skipfailures -where "WOOD NOT LIKE '%deciduous%' AND WOOD NOT LIKE '%coniferous%'" $PWD/osm_forest_m/mosm_forest.shp $PWD/OUT/forest-cut.shp
 ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='beach' or NATURAL='sand'" $PWD/osm_sand/mosm_sand.shp $PWD/OUT/surface-polygon-cut.shp
 ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY='river'" $PWD/osm_water_river/mosm_river.shp $PWD/OUT/water-line-cut.shp
 ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY='canal'" $PWD/osm_water_canal/mosm_canal.shp $PWD/OUT/water-line-cut.shp
@@ -1800,7 +1805,9 @@ rm -rf $ptp/data/shapefiles/osm_marsh
 rm -rf $ptp/data/shapefiles/osm_heath
 rm -rf $ptp/data/shapefiles/osm_scrub
 rm -rf $ptp/data/shapefiles/osm_urban
-rm -rf $ptp/data/shapefiles/osm_forest
+rm -rf $ptp/data/shapefiles/osm_forest_c
+rm -rf $ptp/data/shapefiles/osm_forest_d
+rm -rf $ptp/data/shapefiles/osm_forest_m
 rm -rf $ptp/data/shapefiles/osm_water_river
 rm -rf $ptp/data/shapefiles/osm_water_canal
 rm -rf $ptp/data/shapefiles/osm_water_stream
@@ -1832,7 +1839,9 @@ mv $PWD/osm_marsh $ptp/data/shapefiles/
 mv $PWD/osm_heath $ptp/data/shapefiles/
 mv $PWD/osm_scrub $ptp/data/shapefiles/
 mv $PWD/osm_urban $ptp/data/shapefiles/
-mv $PWD/osm_forest $ptp/data/shapefiles/
+mv $PWD/osm_forest_c $ptp/data/shapefiles/
+mv $PWD/osm_forest_d $ptp/data/shapefiles/
+mv $PWD/osm_forest_m $ptp/data/shapefiles/
 mv $PWD/osm_water_river $ptp/data/shapefiles/
 mv $PWD/osm_water_canal $ptp/data/shapefiles/
 mv $PWD/osm_water_stream $ptp/data/shapefiles/

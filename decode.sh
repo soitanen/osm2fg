@@ -38,7 +38,9 @@ fi
 
 rm -rf $PWD/work/landmass
 rm -rf $PWD/work/grass
-rm -rf $PWD/work/osm_forest
+rm -rf $PWD/work/osm_forest_c
+rm -rf $PWD/work/osm_forest_d
+rm -rf $PWD/work/osm_forest_m
 rm -rf $PWD/work/osm_motorway
 rm -rf $PWD/work/osm_motorway_link
 rm -rf $PWD/work/osm_trunk
