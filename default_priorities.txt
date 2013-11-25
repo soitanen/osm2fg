@@ -66,7 +66,6 @@ NaturalCrop		other
 CropGrass		other	# Cropland/Grassland Mosaic
 CropWood		other	# Cropland/Woodland Mosaic
 AgroForest		other
-Olives			other
 GolfCourse		other	# GolfCourse
 Scrub			other	# Scrub
 ShrubGrassCover		other	# Mixed Shrubland/Grassland
@@ -83,6 +82,7 @@ BarrenCover		other	# Barren or Sparsely Vegetated
 HerbTundra		other	# Herbaceous Tundra
 Sclerophyllous		other
 Heath			other
+Olives			other
 Airport			other
 Meadow			other
 Greenspace		other

@@ -53,7 +53,7 @@ if [ "$heights" == "y" ]
 then
 # height downloading and generation it in needed format
 echo "$(date): Starting generating heights sh height_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo">>terrlog.txt
-bash height_gen.sh -n $n -s $s -w $w -e $e -t $tg -g $gtopo
+bash dem3.sh -n $n -s $s -w $w -e $e -t $tg
 fi
 
 if [ "$airports" != "n" ]
