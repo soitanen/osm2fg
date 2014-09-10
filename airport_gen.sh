@@ -37,7 +37,7 @@ rm -rf $PWD/work/Shared
 if [ $airports -eq 1 -o $airports -eq 3 -o $airports -eq 5 -o $airports -eq 7 ]
 then
 #parsing all airports in area
-$tg/genapts850 --threads --input=$PWD/data/airports_base/apt.dat --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
+$tg/genapts850 --threads --max-slope=0.02 --input=$PWD/data/airports_base/apt.dat --min-lon=$w --max-lon=$e --min-lat=$s --max-lat=$n --work=$PWD/work
 fi
 
 

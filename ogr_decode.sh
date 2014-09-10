@@ -126,7 +126,7 @@ then
 	echo $(date) Decoding osm_tram
 	$tg/ogr-decode --max-segment 500 --area-type Railroad_tex_1 --line-width 3 --texture-lines $PWD/work/osm_tram $PWD/data/shapefiles/osm_tram
 	echo $(date) Decoding osm_farm
-	$tg/ogr-decode --max-segment 500 --area-type BrownField $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
+	$tg/ogr-decode --max-segment 500 --area-type IrrCrop $PWD/work/osm_farm $PWD/data/shapefiles/osm_farm
 fi
 
 if [ "$lod" -ge 3 ]
@@ -163,7 +163,7 @@ then
 	echo $(date) Decoding osm_railway_spur
 	$tg/ogr-decode --max-segment 500 --area-type Railroad_tex_1 --line-width 3 --texture-lines $PWD/work/osm_railway_spur $PWD/data/shapefiles/osm_railway_spur
 	echo $(date) Decoding osm_meadow
-	$tg/ogr-decode --max-segment 500 --area-type GreenField $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
+	$tg/ogr-decode --max-segment 500 --area-type IrrCrop $PWD/work/osm_meadow $PWD/data/shapefiles/osm_meadow
 	echo $(date) Decoding osm_grass
 	$tg/ogr-decode --max-segment 500 --area-type Airport $PWD/work/osm_grass $PWD/data/shapefiles/osm_grass
 	echo $(date) Decoding osm_sand
