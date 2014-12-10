@@ -1715,71 +1715,71 @@ mkdir osm_unpaved_roads
 
 #-nlt "LINESTRING" -lco ENCODING=UTF-8
 
-ogr2ogr -skipfailures -simplify 0.00003 -where "TUNNEL!='yes'" $PWD/OUT/highway_non_tunnel.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.00003 -where "TUNNEL NOT LIKE '%yes%'" $PWD/OUT/highway_non_tunnel.shp $PWD/OUT/highway-line-cut.shp
 
-ogr2ogr -skipfailures -update -append -where "SURFACE='wood'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='unpaved'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='sawdust'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='sand'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='pebblestone'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='ground_dirt'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='ground'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='gravel'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='grass'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='fine_gravel'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='earth'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='dirt'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -update -append -where "SURFACE='compacted'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%wood%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%unpaved%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%sawdust%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%sand%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%pebblestone%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%ground_dirt%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%ground%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%gravel%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%grass%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%fine_gravel%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%earth%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%dirt%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -update -append -where "SURFACE LIKE '%compacted%'" $PWD/osm_unpaved_roads/highway_unpaved.shp $PWD/OUT/highway_non_tunnel.shp
 
 rm $PWD/OUT/highway-line-cut.*
-ogr2ogr -skipfailures -where "SURFACE!='wood'" $PWD/OUT/highway-filter-01.shp $PWD/OUT/highway_non_tunnel.shp
-ogr2ogr -skipfailures -where "SURFACE!='unpaved'" $PWD/OUT/highway-filter-02.shp $PWD/OUT/highway-filter-01.shp
-ogr2ogr -skipfailures -where "SURFACE!='sawdust'" $PWD/OUT/highway-filter-03.shp $PWD/OUT/highway-filter-02.shp
-ogr2ogr -skipfailures -where "SURFACE!='sand'" $PWD/OUT/highway-filter-04.shp $PWD/OUT/highway-filter-03.shp
-ogr2ogr -skipfailures -where "SURFACE!='pebblestone'" $PWD/OUT/highway-filter-05.shp $PWD/OUT/highway-filter-04.shp
-ogr2ogr -skipfailures -where "SURFACE!='ground_dirt'" $PWD/OUT/highway-filter-06.shp $PWD/OUT/highway-filter-05.shp
-ogr2ogr -skipfailures -where "SURFACE!='ground'" $PWD/OUT/highway-filter-07.shp $PWD/OUT/highway-filter-06.shp
-ogr2ogr -skipfailures -where "SURFACE!='gravel'" $PWD/OUT/highway-filter-08.shp $PWD/OUT/highway-filter-07.shp
-ogr2ogr -skipfailures -where "SURFACE!='grass'" $PWD/OUT/highway-filter-09.shp $PWD/OUT/highway-filter-08.shp
-ogr2ogr -skipfailures -where "SURFACE!='fine_gravel'" $PWD/OUT/highway-filter-10.shp $PWD/OUT/highway-filter-09.shp
-ogr2ogr -skipfailures -where "SURFACE!='earth'" $PWD/OUT/highway-filter-11.shp $PWD/OUT/highway-filter-10.shp
-ogr2ogr -skipfailures -where "SURFACE!='dirt'" $PWD/OUT/highway-filter-12.shp $PWD/OUT/highway-filter-11.shp
-ogr2ogr -skipfailures -where "SURFACE!='compacted'" $PWD/OUT/highway-line-cut.shp $PWD/OUT/highway-filter-12.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%wood%'" $PWD/OUT/highway-filter-01.shp $PWD/OUT/highway_non_tunnel.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%unpaved%'" $PWD/OUT/highway-filter-02.shp $PWD/OUT/highway-filter-01.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%sawdust%'" $PWD/OUT/highway-filter-03.shp $PWD/OUT/highway-filter-02.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%sand%'" $PWD/OUT/highway-filter-04.shp $PWD/OUT/highway-filter-03.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%pebblestone%'" $PWD/OUT/highway-filter-05.shp $PWD/OUT/highway-filter-04.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%ground_dirt%'" $PWD/OUT/highway-filter-06.shp $PWD/OUT/highway-filter-05.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%ground%'" $PWD/OUT/highway-filter-07.shp $PWD/OUT/highway-filter-06.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%gravel%'" $PWD/OUT/highway-filter-08.shp $PWD/OUT/highway-filter-07.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%grass%'" $PWD/OUT/highway-filter-09.shp $PWD/OUT/highway-filter-08.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%fine_gravel%'" $PWD/OUT/highway-filter-10.shp $PWD/OUT/highway-filter-09.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%earth%'" $PWD/OUT/highway-filter-11.shp $PWD/OUT/highway-filter-10.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%dirt%'" $PWD/OUT/highway-filter-12.shp $PWD/OUT/highway-filter-11.shp
+ogr2ogr -skipfailures -where "SURFACE NOT LIKE '%compacted%'" $PWD/OUT/highway-line-cut.shp $PWD/OUT/highway-filter-12.shp
 
 
-ogr2ogr -skipfailures -where "HIGHWAY='motorway'" $PWD/osm_motorway/mosm_motorway.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='motorway_link' OR HIGHWAY='primary_link' OR HIGHWAY='secondary_link' OR HIGHWAY='tertiary_link' OR HIGHWAY='trunk_link'" $PWD/osm_motorway_link/mosm_links.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='trunk'" $PWD/osm_trunk/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='primary'" $PWD/osm_primary/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='secondary'" $PWD/osm_secondary/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='tertiary'" $PWD/osm_tertiary/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='service'" $PWD/osm_service/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='unclassified'" $PWD/osm_unclassified/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='residential'" $PWD/osm_residential/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -where "HIGHWAY='raceway'" $PWD/osm_raceway/mosm_road.shp $PWD/OUT/highway-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='water' OR WATERWAY='riverbank'" $PWD/osm_water_poly/mosm_water.shp $PWD/OUT/water-polygon-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'motorway'" $PWD/osm_motorway/mosm_motorway.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'motorway_link' OR HIGHWAY LIKE 'primary_link' OR HIGHWAY LIKE 'secondary_link' OR HIGHWAY LIKE 'tertiary_link' OR HIGHWAY LIKE 'trunk_link'" $PWD/osm_motorway_link/mosm_links.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'trunk'" $PWD/osm_trunk/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'primary'" $PWD/osm_primary/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'secondary'" $PWD/osm_secondary/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'tertiary'" $PWD/osm_tertiary/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'service'" $PWD/osm_service/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'unclassified'" $PWD/osm_unclassified/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'residential'" $PWD/osm_residential/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -where "HIGHWAY LIKE 'raceway'" $PWD/osm_raceway/mosm_road.shp $PWD/OUT/highway-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%water%' OR WATERWAY LIKE '%riverbank%'" $PWD/osm_water_poly/mosm_water.shp $PWD/OUT/water-polygon-cut.shp
 ogr2ogr -skipfailures -simplify 0.0001 -where "WETLAND LIKE '%bog%' OR WETLAND LIKE '%marsh%' OR WETLAND LIKE '%swamp%' OR NATURAL LIKE '%wetland%'" $PWD/osm_marsh/mosm_marsh.shp $PWD/OUT/water-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='heath'" $PWD/osm_heath/mosm_heath.shp $PWD/OUT/vegetation-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='scrub'" $PWD/osm_scrub/mosm_scrub.shp $PWD/OUT/vegetation-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE='allotments' OR LANDUSE='residential'" $PWD/osm_urban/mosm_urban.shp $PWD/OUT/landuse-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%heath%'" $PWD/osm_heath/mosm_heath.shp $PWD/OUT/vegetation-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%scrub%'" $PWD/osm_scrub/mosm_scrub.shp $PWD/OUT/vegetation-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE LIKE '%allotments%' OR LANDUSE LIKE '%residential%'" $PWD/osm_urban/mosm_urban.shp $PWD/OUT/landuse-polygon-cut.shp
 #ogr2ogr -skipfailures $PWD/osm_forest/mosm_forest.shp $PWD/OUT/vegetation-polygon-cut.shp
 ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%wood%' OR LANDUSE LIKE '%forest%'" $PWD/OUT/forest-cut.shp $PWD/OUT/vegetation-polygon-cut.shp
 ogr2ogr -skipfailures -where "WOOD LIKE '%coniferous%'" $PWD/osm_forest_c/mosm_forest.shp $PWD/OUT/forest-cut.shp
 ogr2ogr -skipfailures -where "WOOD LIKE '%deciduous%'" $PWD/osm_forest_d/mosm_forest.shp $PWD/OUT/forest-cut.shp
 ogr2ogr -skipfailures -where "WOOD NOT LIKE '%deciduous%' AND WOOD NOT LIKE '%coniferous%'" $PWD/osm_forest_m/mosm_forest.shp $PWD/OUT/forest-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL='beach' or NATURAL='sand'" $PWD/osm_sand/mosm_sand.shp $PWD/OUT/surface-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY='river'" $PWD/osm_water_river/mosm_river.shp $PWD/OUT/water-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY='canal'" $PWD/osm_water_canal/mosm_canal.shp $PWD/OUT/water-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY='stream'" $PWD/osm_water_stream/mosm_stream.shp $PWD/OUT/water-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL!='yes' AND RAILWAY='rail'" $PWD/osm_railway/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL!='yes' AND RAILWAY='siding'" $PWD/osm_railway_siding/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL!='yes' AND RAILWAY='spur'" $PWD/osm_railway_spur/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL!='yes' AND RAILWAY='tram'" $PWD/osm_tram/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE='industrial'" $PWD/osm_industrial/mosm_industrial.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE='meadow'" $PWD/osm_meadow/mosm_meadow.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE='farm' OR LANDUSE='farmland' OR LANDUSE='farmyard'" $PWD/osm_farm/mosm_farm.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE='grass' OR LANDUSE='grassland' OR LANDUSE='greenfield'" $PWD/osm_grass/mosm_grass.shp $PWD/OUT/landuse-polygon-cut.shp
-ogr2ogr -skipfailures -simplify 0.0001 -where "AMENITY='parking'" $PWD/osm_parking/mosm_parking.shp $PWD/OUT/poi-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "NATURAL LIKE '%beach%' or NATURAL LIKE '%sand%'" $PWD/osm_sand/mosm_sand.shp $PWD/OUT/surface-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY LIKE '%river%'" $PWD/osm_water_river/mosm_river.shp $PWD/OUT/water-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY LIKE '%canal%'" $PWD/osm_water_canal/mosm_canal.shp $PWD/OUT/water-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "WATERWAY LIKE '%stream%'" $PWD/osm_water_stream/mosm_stream.shp $PWD/OUT/water-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL NOT LIKE '%yes%' AND RAILWAY LIKE '%rail%'" $PWD/osm_railway/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL NOT LIKE '%yes%' AND RAILWAY LIKE '%siding%'" $PWD/osm_railway_siding/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL NOT LIKE '%yes%' AND RAILWAY LIKE '%spur%'" $PWD/osm_railway_spur/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.00005 -where "TUNNEL NOT LIKE '%yes%' AND RAILWAY LIKE '%tram%'" $PWD/osm_tram/mosm_rail.shp $PWD/OUT/railway-line-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE LIKE '%industrial%'" $PWD/osm_industrial/mosm_industrial.shp $PWD/OUT/landuse-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE LIKE '%meadow%'" $PWD/osm_meadow/mosm_meadow.shp $PWD/OUT/landuse-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE LIKE '%farm%' OR LANDUSE LIKE '%farmland%' OR LANDUSE LIKE '%farmyard%'" $PWD/osm_farm/mosm_farm.shp $PWD/OUT/landuse-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "LANDUSE LIKE '%grass%' OR LANDUSE LIKE '%grassland%' OR LANDUSE LIKE '%greenfield%'" $PWD/osm_grass/mosm_grass.shp $PWD/OUT/landuse-polygon-cut.shp
+ogr2ogr -skipfailures -simplify 0.0001 -where "AMENITY LIKE '%parking%'" $PWD/osm_parking/mosm_parking.shp $PWD/OUT/poi-polygon-cut.shp
 
 ogr2ogr -skipfailures -simplify 0.00001 -a_srs "EPSG:4326" $PWD/osm_coastline/land_polygons-cut_WGS84.shp  $PWD/osm_coastline/land_polygons-cut.shp
 
