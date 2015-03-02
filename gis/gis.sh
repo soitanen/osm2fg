@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts "n:s:w:e:p:" OPTION
+while getopts "n:s:w:e:p:c:" OPTION
 do
      case $OPTION in
          n)
@@ -18,10 +18,16 @@ do
          p)
              ptp=$OPTARG
              ;;
+         c)
+             coastline=$OPTARG
+             ;;
      esac
 done
 
-wget -N http://data.openstreetmapdata.com/land-polygons-split-4326.zip
+if [ "$coastline" == "y" ];
+then
+	wget -N http://data.openstreetmapdata.com/land-polygons-split-4326.zip
+fi
 unzip -uo land-polygons-split-4326.zip  -d $PWD/
 
 mkdir osm_coastline

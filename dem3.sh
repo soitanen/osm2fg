@@ -339,7 +339,7 @@ for lat in `seq $gks $gkn`;
 			P40.zip)hgtfile="P40v2.zip";;
 		esac
 		echo $hgtfile
-		wget -N http://www.viewfinderpanoramas.org/dem3/$hgtfile --directory-prefix=$PWD/data/VFP/
+		wget -N -t 2 http://www.viewfinderpanoramas.org/dem3/$hgtfile --directory-prefix=$PWD/data/VFP/
 		unzip -uoj $PWD/data/VFP/$hgtfile -d $PWD/data/VFP/
             done
     done

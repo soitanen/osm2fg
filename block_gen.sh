@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts "n:s:w:e:t:i:l:d:o:m:" OPTION
+while getopts "n:s:w:e:t:i:l:d:o:m:c:" OPTION
 do
      case $OPTION in
          n)
@@ -33,6 +33,9 @@ do
          m)
              defaultmaterial=$OPTARG
              ;;
+         c)
+             coastline=$OPTARG
+             ;;
      esac
 done
 
@@ -43,7 +46,7 @@ i=$s
 if [ "$decode" == "y" ]
 then
 echo "$(date): sh decode.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt
-bash decode.sh -n $n -s $s -w $w -e $e -t $tg -l $lod -o $owndata -m $defaultmaterial
+bash decode.sh -n $n -s $s -w $w -e $e -t $tg -l $lod -o $owndata -m $defaultmaterial -c $coastline
 fi
 
 echo "$(date): sh terrain_gen.sh -n $n -s $s -w $w -e $e -t $tg">>terrlog.txt

@@ -1,4 +1,4 @@
-while getopts "n:s:w:e:t:l:o:m:" OPTION
+while getopts "n:s:w:e:t:l:o:m:c:" OPTION
 do
      case $OPTION in
          n)
@@ -25,6 +25,9 @@ do
          m)
              defaultmaterial=$OPTARG
              ;;
+         c)
+             coastline=$OPTARG
+             ;;
      esac
 done
 ptp=$(pwd)
@@ -32,7 +35,7 @@ ptp=$(pwd)
 if [ "$owndata" == "n" ]
 then
 cd gis/
-bash gis.sh -n $n -s $s -w $w -e $e -p $ptp
+bash gis.sh -n $n -s $s -w $w -e $e -p $ptp -c $coastline
 cd ..
 fi
 
